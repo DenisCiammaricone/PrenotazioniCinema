@@ -85,8 +85,9 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title"></h4>
-                            <p class="card-text"></p>
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
                           </div>
 
                         </div>
@@ -98,8 +99,9 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title"></h4>
-                            <p class="card-text"></p>
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
                           </div>
 
                         </div>
@@ -111,8 +113,9 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title"></h4>
-                            <p class="card-text"></p>
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
                           </div>
 
                         </div>
@@ -124,8 +127,9 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title"></h4>
-                            <p class="card-text"></p>
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
                           </div>
 
                         </div>
@@ -137,8 +141,9 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title">Prova</h4>
-                            <p class="card-text">Giusto per prova</p>
+                              <h4 class="card-title">Prova</h4>
+                              <p class="card-text">Giusto per prova</p>
+                              <a href="#" class="stretched-link"></a>
                           </div>
 
                         </div>
@@ -150,12 +155,85 @@
                     <h4 >Prossimo spettacolo</h4>
                     <hr>
 
-                    <div>
+                    <div class="card-deck" style="color:black;">
+                        
+                        <!-- Primo spettacolo -->
+                        <div class="card" style="width:10vw;">
 
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Secondo spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Terzo spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Quarto spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                              <h4 class="card-title"></h4>
+                              <p class="card-text"></p>
+                              <a href="#" class="stretched-link"></a>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Quinto spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                              <h4 class="card-title">Prova</h4>
+                              <p class="card-text">Giusto per prova</p>
+                              <a href="#" class="stretched-link"></a>
+                          </div>
+
+                        </div>
+                        
                     </div>
                 </article>
             </section>
         </main>
+        
+        <footer class="text-light">
+            sos
+        </footer>
         
     </body>
 </html>

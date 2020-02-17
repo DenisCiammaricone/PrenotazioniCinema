@@ -36,3 +36,12 @@ aside ul
 {
     background-color: #4c4c4c;
 }
+
+footer
+{
+    position:static;
+    bottom:0vh;
+    background-color: darkgray;
+    width:100%;
+    margin-top:20px;
+}
