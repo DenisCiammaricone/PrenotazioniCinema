@@ -74,12 +74,86 @@
             
             <section class="mt-4">
                 
-                <h4 >In programmazione oggi</h4>
-                <hr>
+                <article>
+                    <h4 >In programmazione oggi</h4>
+                    <hr>
+                    <div class="card-deck">
+                        
+                        <!-- Primo spettacolo -->
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text.</p>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Secondo spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text.</p>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Terzo spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text.</p>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Quarto spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text.</p>
+                          </div>
+
+                        </div>
+                        
+                        <!-- Quinto spettacolo -->
+                        
+                        <div class="card" style="width:10vw;">
+
+                          <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                          <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text">Some example text.</p>
+                          </div>
+
+                        </div>
+                        
+                    </div>
+                </article>
                 
-                <div>
-                    
-                </div>
+                <article>
+                    <h4 >Prossimo spettacolo</h4>
+                    <hr>
+
+                    <div>
+
+                    </div>
+                </article>
             </section>
         </main>
         
