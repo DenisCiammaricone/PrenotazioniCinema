@@ -13,7 +13,7 @@
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
     </head>
     
-    <body class="bg-light">
+    <body class="gray">
         
         <header class="jumbotron jumbotron-fluid container-fluid text-center bg-dark text-light">
             <h1 class="display-3">Benvenuti al cinema *name*</h1>
@@ -38,12 +38,49 @@
             
         </aside>
         
-        <main class="container">
-            <h4>In programmazione oggi</h4>
-            <hr>
-            <div>
-            </div>
+        
+        
+        <main class="container mt-4 text-light">
             
+            <section class="text-center">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                  <!-- Indicators -->
+                  <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                  </ul>
+
+                  <!-- The slideshow -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="inc/img/cinema.jpg" alt="Los Angeles">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="inc/img/film.jpg" alt="Chicago">
+                    </div>
+                  </div>
+
+                  <!-- Left and right controls -->
+                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a>
+
+                </div>
+            </section>
+            
+            <section class="mt-4">
+                
+                <h4 >In programmazione oggi</h4>
+                <hr>
+                
+                <div>
+
+                </div>
+            </section>
         </main>
         
     </body>
