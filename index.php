@@ -74,7 +74,7 @@
             
             <section class="mt-4">
                 
-                <article>
+                <article class="mb-4">
                     <h4 >In programmazione oggi</h4>
                     <hr>
                     <div class="card-deck">
