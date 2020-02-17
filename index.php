@@ -16,7 +16,7 @@
     <body class="bg-light">
         
         <header class="jumbotron jumbotron-fluid container-fluid text-center bg-dark text-light">
-            <h1 class="display-3 vinerhand">Benvenuti al cinema *name*</h1>
+            <h1 class="display-3">Benvenuti al cinema *name*</h1>
         </header>
         
         <aside class="navbar navbar-dark">
