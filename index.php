@@ -33,7 +33,7 @@
         </aside>
         
         <header class="jumbotron container text-center bg-dark text-light">
-            <h1 class="display-2 vinerhand">Benvenuti al cinema *name*</h1>
+            <h1 class="display-3 vinerhand">Benvenuti al cinema *name*</h1>
         </header>
         
         
