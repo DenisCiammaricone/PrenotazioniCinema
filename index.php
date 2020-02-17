@@ -77,7 +77,7 @@
                 <article class="mb-4">
                     <h4 >In programmazione oggi</h4>
                     <hr>
-                    <div class="card-deck">
+                    <div class="card-deck" style="color:black;">
                         
                         <!-- Primo spettacolo -->
                         <div class="card" style="width:10vw;">
@@ -85,8 +85,8 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title">John Doe</h4>
-                            <p class="card-text">Some example text.</p>
+                            <h4 class="card-title"></h4>
+                            <p class="card-text"></p>
                           </div>
 
                         </div>
@@ -98,8 +98,8 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title">John Doe</h4>
-                            <p class="card-text">Some example text.</p>
+                            <h4 class="card-title"></h4>
+                            <p class="card-text"></p>
                           </div>
 
                         </div>
@@ -111,8 +111,8 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title">John Doe</h4>
-                            <p class="card-text">Some example text.</p>
+                            <h4 class="card-title"></h4>
+                            <p class="card-text"></p>
                           </div>
 
                         </div>
@@ -124,8 +124,8 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title">John Doe</h4>
-                            <p class="card-text">Some example text.</p>
+                            <h4 class="card-title"></h4>
+                            <p class="card-text"></p>
                           </div>
 
                         </div>
@@ -137,8 +137,8 @@
                           <img class="card-img-top" src="img_avatar1.png" alt="Card image">
 
                           <div class="card-body">
-                            <h4 class="card-title">John Doe</h4>
-                            <p class="card-text">Some example text.</p>
+                            <h4 class="card-title">Prova</h4>
+                            <p class="card-text">Giusto per prova</p>
                           </div>
 
                         </div>
