@@ -1,0 +1,23 @@
+.no-decoration:focus
+{
+    outline: none;
+}
+
+.no-decoration
+{
+    border:0px;
+}
+
+aside
+{
+    position: fixed;
+    left:-1.3em;
+    top:-0.5em;
+    float:left;
+}
+
+aside ul
+{
+    height:92.5vh; 
+    width:8em;
+}
