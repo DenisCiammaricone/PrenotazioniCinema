@@ -22,14 +22,14 @@
 aside
 {
     position: fixed;
-    left:-1.3em;
-    top:-2.5em;
+    left:-1.3em; 
+    top:-2.5em; 
     float:left;
 }
 
 aside ul
 {
-    height:92.5vh; 
+    height:100vh; 
     width:8em;
 }
 

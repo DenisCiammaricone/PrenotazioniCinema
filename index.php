@@ -19,7 +19,7 @@
             <h1 class="display-3">Benvenuti al cinema *name*</h1>
         </header>
         
-        <aside class="navbar navbar-dark">
+        <aside class="navbar navbar-dark fixed-top">
             
             <div class="bg-danger">
                 <button class="navbar-toggler no-decoration" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -78,7 +78,7 @@
                 <hr>
                 
                 <div>
-
+                    
                 </div>
             </section>
         </main>
