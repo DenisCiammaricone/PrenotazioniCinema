@@ -20,6 +20,7 @@
         </header>
         
         <aside class="navbar navbar-dark">
+            
             <div class="bg-danger">
                 <button class="navbar-toggler no-decoration" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon no-decoration"></span>
@@ -34,6 +35,7 @@
                     </ul>
                 </div>
             </div>
+            
         </aside>
         
     </body>
