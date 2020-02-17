@@ -28,7 +28,7 @@
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav bg-danger pt-2 pb-4 pl-4 pr-2">
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="#">Roba</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="#">Altro</a></li>
                         <li class="nav-item"><a class="nav-link text-light" href="#">Assistenza</a></li>
