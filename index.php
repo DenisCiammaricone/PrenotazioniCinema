@@ -16,6 +16,8 @@
     </head>
     
     <body class="gray">
+        <!-- Cookie policy popup -->
+        <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#2f2f2f","text":"#ffffff","border":"#ffffff"},"button":{"background":"#626161","text":"#ffffff"}},"position":"bottom-right","corners":"large","margin":"large","transparency":"10","content":{"href":"#","message":"Questo sito utilizza i Cookies per migliorare l'esperienza dell'utente.","button":"Accetto"}})});</script>
         
         <header class="jumbotron jumbotron-fluid container-fluid text-center bg-dark text-light">
             <h1 class="display-3">Benvenuti al cinema *name*</h1>
