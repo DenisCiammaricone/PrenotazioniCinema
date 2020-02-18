@@ -24,6 +24,7 @@
             <h1 class="display-4">Benvenuti al cinema *name*</h1>
         </header>
         
+        <div class="fixed">
         <aside class="navbar navbar-light">
             
             <div id="mioaside">
@@ -33,16 +34,16 @@
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav pt-2 pb-4 pl-4 pr-2">
-                        <li class="nav-item"><a class="nav-link text-black" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="#">Roba</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="#">Altro</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="#">Assistenza</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php" style="color:black;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Roba</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Altro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Assistenza</a></li>
                     </ul>
                 </div>
             </div>
             
         </aside>
-        
+        </div>
         
         
         <main class="container mt-4 text-black Opacizable" >

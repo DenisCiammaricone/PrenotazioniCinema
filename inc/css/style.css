@@ -19,9 +19,13 @@
     border:0px;
 }
 
+.fixed{
+    
+    position: fixed;
+}
+
 aside
 {
-    position: fixed;
     left:-0.8em;
     top: -20vh;
     float:left;
