@@ -22,7 +22,8 @@
 aside
 {
     position: fixed;
-    left:-1.3em; 
+    left:-0.8em;
+    top: -20vh;
     float:left;
 }
 
@@ -50,4 +51,14 @@ footer
 {
     background-color: #2f2f2f;
     border:0px;
+}
+
+.AsideMenu
+{
+    background-color:#4c4c4c;
+}
+
+.text-black
+{
+    color:black;
 }

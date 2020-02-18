@@ -13,29 +13,30 @@
         <script src="inc/js/bootstrap.min.js" type="text/javascript"></script>
         
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
+        <script src="inc/js/script.js" type="text/javascript"></script>
     </head>
     
-    <body class="gray">
+    <body>
         <!-- Cookie policy popup -->
         <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#2f2f2f","text":"#ffffff","border":"#ffffff"},"button":{"background":"#626161","text":"#ffffff"}},"position":"bottom-right","corners":"large","margin":"large","transparency":"10","content":{"href":"#","message":"Questo sito utilizza i Cookies per migliorare l'esperienza dell'utente.","button":"Accetto"}})});</script>
         
-        <header class="jumbotron jumbotron-fluid container-fluid text-center bg-dark text-light">
-            <h1 class="display-3">Benvenuti al cinema *name*</h1>
+        <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" style="padding:2%;">
+            <h1 class="display-4">Benvenuti al cinema *name*</h1>
         </header>
         
-        <aside class="navbar navbar-dark fixed-top">
+        <aside class="navbar navbar-light">
             
-            <div class="bg-danger">
-                <button class="navbar-toggler no-decoration" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <div id="mioaside">
+                <button class="navbar-toggler no-decoration" id="toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon no-decoration"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav bg-danger pt-2 pb-4 pl-4 pr-2">
-                        <li class="nav-item"><a class="nav-link text-light" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Roba</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Altro</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Assistenza</a></li>
+                    <ul class="navbar-nav pt-2 pb-4 pl-4 pr-2">
+                        <li class="nav-item"><a class="nav-link text-black" href="index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="#">Roba</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="#">Altro</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="#">Assistenza</a></li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +45,7 @@
         
         
         
-        <main class="container mt-4 text-light">
+        <main class="container mt-4 text-black Opacizable" >
             
             <section class="text-center">
                 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -235,7 +236,7 @@
             </section>
         </main>
         
-        <footer class="text-light pt-2 pr-4">
+        <footer class="text-light pt-2 pr-4 Opacizable">
             <div class="card-deck text-center">
                 
                 <div class="card dark-footer" style="width:20vw;">
