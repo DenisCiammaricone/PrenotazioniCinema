@@ -11,5 +11,4 @@ try {
     console.log('Problema di connessione: ("'.$e.'")');
 }
 
-
 ?>
