@@ -7,7 +7,8 @@
     $name = mysqli_real_escape_string($conn,$_POST['name']);
     $surname = mysqli_real_escape_string($conn,$_POST['surname']);
     $email = mysqli_real_escape_string($conn,$_POST['email']);
-    $pass = mysqli_real_escape_string($conn,$_POST['pass']);
+    $pass = password_hash(mysqli_real_escape_string($conn,$_POST['pass']), PASSWORD_DEFAULT);
+    echo($pass);
 
     //Check for empty fields
     $emptyFieldDetected= false;
