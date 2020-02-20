@@ -24,6 +24,11 @@
     position: fixed;
 }
 
+.top
+{
+    top:0;
+}
+
 aside
 {
     left:-0.8em;
