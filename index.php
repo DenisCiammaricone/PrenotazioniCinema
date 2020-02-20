@@ -6,8 +6,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="inc/js/slim.min.js" type="text/javascript"></script>
+        <script src="inc/js/popper.min.js" type="text/javascript"></script>
         
         <link href="inc/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <script src="inc/js/bootstrap.min.js" type="text/javascript"></script>
@@ -15,6 +15,7 @@
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/script.js" type="text/javascript"></script>
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
+        
     </head>
     
     <body>
@@ -22,17 +23,17 @@
         <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#2f2f2f","text":"#ffffff","border":"#ffffff"},"button":{"background":"#626161","text":"#ffffff"}},"position":"bottom-right","corners":"large","margin":"large","transparency":"10","content":{"href":"#","message":"Questo sito utilizza i Cookies per migliorare l'esperienza dell'utente.","button":"Accetto"}})});</script>
         
         
-        <div class="fixed top" style="width:100%; z-index:2000000;" >
+        <div class="fixed top" style="width:100%; z-index:9;" >
             <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh; ">
 
                 <ul class="navbar-nav">
 
-                    <li class="nav-item"><a href="index.php" class="nav-link" style="color:black; margin-left:35vw;">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Programmazione</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Assistenza</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color:black; margin-right:30vw;">Contattaci</a></li>
+                    <li class="nav-item"><a href="index.php" class="nav-link active text-darkgray" style="margin-left:35vw;">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Programmazione</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Assistenza</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c; margin-right:30vw;">Contattaci</a></li>
 
-                    <button type="button" style="width:8vw;" class="btn btn-outline-dark" id="nascondiRegister" data-toggle="modal" data-target="#Register">
+                    <button type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Register">
                         Registrati
                     </button>
                 </ul>

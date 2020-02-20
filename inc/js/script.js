@@ -18,18 +18,5 @@ $(document).ready(
                 }
                 
             });
-        
-        $('#nascondiRegister').click(
-            
-            function(){
-                $('#pcNav').css('display','none');
-                
-            });
-        
-        $('.rimettiNav').click(
-        
-            function(){
-                $('#pcNav').css('display','flex');
-            });
 
     });
