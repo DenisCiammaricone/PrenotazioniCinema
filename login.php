@@ -44,12 +44,17 @@
 
                     <!-- Modal footer -->
                 
-                    <div class="modal-footer justify-content-center p-4">
-                            <input type="button" onClick="checkRegisterForm()" value="Accedi" class="btn btn-outline-dark mr-4">
-                        <br>
+                    <div class="modal-footer " style="display:block;">
+                        
+                        <div class="row justify-content-center">
+                            <input type="button" onClick="checkLoginForm()" value="Accedi" class="btn btn-outline-dark mb-2">
+                        </div>
+                        <div class="row justify-content-center">
                             <a href="#" data-toggle="modal" data-target="#Register" data-dismiss="modal">
                                 Non ti sei ancora registrato? Clicca qui per registrarti!
                             </a>
+                        </div>
+                        
                     </div>
                 </form>
             </div>

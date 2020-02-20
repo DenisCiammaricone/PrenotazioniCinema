@@ -28,10 +28,10 @@
 
                 <ul class="navbar-nav">
 
-                    <li class="nav-item"><a href="index.php" class="nav-link active text-darkgray" style="margin-left:35vw;">Home</a></li>
+                    <li class="nav-item"><a href="index.php" class="nav-link active text-darkgray" style="margin-left:30vw;">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Programmazione</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Assistenza</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c; margin-right:30vw;">Contattaci</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c; margin-right:25vw;">Contattaci</a></li>
 
                     <button type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">
                         Login
