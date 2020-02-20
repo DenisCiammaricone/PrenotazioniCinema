@@ -22,13 +22,13 @@
 
     $q = "SELECT user_email, user_pass
             FROM users
-           WHERE $email = user_email AND $pass = user_pass";
+           WHERE '$email' = user_email AND '$pass' = user_pass";
     $result = mysqli_query($conn, $q);
 
     if (mysqli_num_rows($result) > 0) {
         header("Location:../../../index.php");
     } else {
         //header("Location:../../html/login.php");
-        echo("Errore!");
+        echo("Errore! ".$pass);
     }
 ?>
