@@ -154,7 +154,7 @@
                         </div>
                     </article>
 
-                    <article>
+                    <article class="mb-4">
                         <h4 >Prossimo spettacolo</h4>
                         <hr>
 
