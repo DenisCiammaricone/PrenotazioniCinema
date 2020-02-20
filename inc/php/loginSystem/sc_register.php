@@ -25,7 +25,7 @@
                 alert("Errore nella creazione utente... Riprova! Reindirizzamento...");
             </script>
         ');
-        header("Location:../../html/register.html");
+        header("Location:../../../register.php");
         exit();
     }
 
