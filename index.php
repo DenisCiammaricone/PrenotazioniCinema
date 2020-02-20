@@ -21,10 +21,23 @@
         <!-- Cookie policy popup -->
         <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#2f2f2f","text":"#ffffff","border":"#ffffff"},"button":{"background":"#626161","text":"#ffffff"}},"position":"bottom-right","corners":"large","margin":"large","transparency":"10","content":{"href":"#","message":"Questo sito utilizza i Cookies per migliorare l'esperienza dell'utente.","button":"Accetto"}})});</script>
         
-        <div class="d-flex flex-row-reverse">
-            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#Register">
-              Registrati
-            </button>
+        
+        <div class="fixed" style="width:100%; z-index:2000000;">
+            <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" >
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item"><a href="index.php" class="nav-link" style="color:black;">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Programmazione</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Assistenza</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Contattaci</a></li>
+
+                    <button type="button" class="btn btn-outline-dark " data-toggle="modal" data-target="#Register">
+                        Registrati
+                    </button>
+                </ul>
+
+            </nav>
         </div>
         
         <?php include('register.php') ?>
@@ -33,25 +46,24 @@
             <h1 class="display-4">Benvenuti al cinema *name*</h1>
         </header>
         
-        <div class="fixed">
-        <aside class="navbar navbar-light">
-            
-            <div id="mioaside">
-                <button class="navbar-toggler no-decoration" id="toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon no-decoration"></span>
-                </button>
+        
+        <div class="fixed" id="cellAside">
+            <aside class="navbar navbar-light">
 
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav pt-2 pb-4 pl-4 pr-2">
-                        <li class="nav-item"><a class="nav-link" href="index.php" style="color:black;">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Roba</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Altro</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Assistenza</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </aside>
+                    <button class="navbar-toggler no-decoration" id="toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon no-decoration"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav pt-2 pb-4 pl-4 pr-2">
+                            <li class="nav-item"><a class="nav-link" href="index.php" style="color:black;">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Programmazione</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Assistenza</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Contattaci</a></li>
+                        </ul>
+                    </div>
+
+            </aside>
         </div>
         
         
