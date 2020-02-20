@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <form id="registerForm" method="post" action="../php/loginSystem/sc_register.php">
+        <form id="registerForm" method="post" action="inc/php/loginSystem/sc_register.php">
             <label for="name">* Nome</label><br>
             <input type="text" id="name" name="name"><br><br>
             <label for="surname">* Cognome</label><br>
