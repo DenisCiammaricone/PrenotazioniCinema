@@ -22,8 +22,8 @@
         <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#2f2f2f","text":"#ffffff","border":"#ffffff"},"button":{"background":"#626161","text":"#ffffff"}},"position":"bottom-right","corners":"large","margin":"large","transparency":"10","content":{"href":"#","message":"Questo sito utilizza i Cookies per migliorare l'esperienza dell'utente.","button":"Accetto"}})});</script>
         
         
-        <div class="fixed top" style="width:100%; z-index:2000000;">
-            <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav">
+        <div class="fixed top" style="width:100%; z-index:2000000;" >
+            <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh; ">
 
                 <ul class="navbar-nav">
 
@@ -32,7 +32,7 @@
                     <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Assistenza</a></li>
                     <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Contattaci</a></li>
 
-                    <button type="button" class="btn btn-outline-dark " data-toggle="modal" data-target="#Register">
+                    <button type="button" class="btn btn-outline-dark" id="nascondiRegister" data-toggle="modal" data-target="#Register">
                         Registrati
                     </button>
                 </ul>
@@ -42,7 +42,7 @@
         
         <?php include('register.php') ?>
         
-        <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" style="padding:1%; margin-top:7.5vh;">
+        <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" style="padding:1%; margin-top:6vh;">
             <h1 class="display-4">Benvenuti al cinema Goosebumps</h1>
         </header>
         

@@ -1,7 +1,7 @@
 
 
         <!-- Modal -->
-        <div class="modal" id="Register">
+        <div class="modal mt-4" id="Register">
           <div class="modal-dialog">
             <div class="modal-content">
                 <form id="registerForm" method="post" action="inc/php/loginSystem/sc_register.php" class="form-group">
@@ -107,11 +107,11 @@
                         <div class="row">
                             
                             <div class="col">
-                                <input type="button" onClick="checkForm();" class="btn btn-outline-dark mr-4" value="Registrati">
+                                <input type="button" onClick="checkForm();" class="btn btn-outline-dark mr-4 rimettiNav" value="Registrati">
                             </div>      
                             
                             <div class="col" style="left:100%;">
-                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Esci</button>
+                                <button type="button" class="btn btn-outline-danger rimettiNav" data-dismiss="modal">Esci</button>
                             </div>
                             
                         </div>
