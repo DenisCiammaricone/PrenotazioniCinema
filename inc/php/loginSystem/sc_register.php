@@ -29,10 +29,27 @@
         exit();
     }
 
+    $q = "SELECT user_email, user_name, user_surname
+            FROM users
+           WHERE user_email = '$email' OR user_name = '$name' OR user_surname = '$surname'";
+    $result = mysqli_query($conn, $q);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo('
+            <script type="text/javascript">
+                alert("Utente con queste credenziali già creato!");
+            </script>
+        ');
+        header("Location:../../../register.php");
+    }
+
     //Query to add a ner user as a record
     $q = "INSERT INTO users (user_name,user_surname,user_email,user_pass)
                      VALUES ('$name','$surname','$email','$pass')";
     $result = mysqli_query($conn, $q);
 
     mysqli_close($conn);
+
+
+    
 ?>
