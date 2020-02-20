@@ -14,11 +14,20 @@
         
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/script.js" type="text/javascript"></script>
+        <script src="inc/js/formVerification.js" type="text/javascript"></script>
     </head>
     
     <body>
         <!-- Cookie policy popup -->
         <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#2f2f2f","text":"#ffffff","border":"#ffffff"},"button":{"background":"#626161","text":"#ffffff"}},"position":"bottom-right","corners":"large","margin":"large","transparency":"10","content":{"href":"#","message":"Questo sito utilizza i Cookies per migliorare l'esperienza dell'utente.","button":"Accetto"}})});</script>
+        
+        <div class="d-flex flex-row-reverse">
+            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#Register">
+              Registrati
+            </button>
+        </div>
+        
+        <?php include('register.php') ?>
         
         <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" style="padding:2%;">
             <h1 class="display-4">Benvenuti al cinema *name*</h1>
@@ -44,6 +53,7 @@
             
         </aside>
         </div>
+        
         
         
         <main class="container mt-4 text-black Opacizable" >
