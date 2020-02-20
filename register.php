@@ -4,8 +4,9 @@
             <div class="modal-content">
                 <form id="registerForm" method="post" action="inc/php/loginSystem/sc_register.php" class="form-group">
                       <!-- Modal Header -->
-                      <div class="modal-header bg-secondary" style="justify-content:center;">
+                      <div class="modal-header bg-secondary">
                         <h4 class="modal-title text-white">Registrazione</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
 
                       <!-- Modal body -->
@@ -101,18 +102,10 @@
 
                     <!-- Modal footer -->
                 
-                    <div class="modal-footer">
-                        <div class="row">
+                    <div class="modal-footer justify-content-center">
+                        
+                        <input type="button" onClick="checkRegisterForm()" class="btn btn-outline-dark mr-4" value="Registrati">
                             
-                            <div class="col">
-                                <input type="button" onClick="checkRegisterForm()" class="btn btn-outline-dark mr-4" value="Registrati">
-                            </div>      
-                            
-                            <div class="col" style="left:100%;">
-                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Esci</button>
-                            </div>
-                            
-                        </div>
                     </div>
                 </form>
             </div>

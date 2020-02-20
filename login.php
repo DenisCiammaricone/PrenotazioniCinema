@@ -1,33 +1,57 @@
-<!DOCTYPE html>
-<html lang="it"> 
+<div class="modal" id="Login">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="loginForm" method="post" action="inc/php/loginSystem/sc_login.php" class="form-group">
+                      <!-- Modal Header -->
+                      <div class="modal-header bg-secondary">
+                        <h4 class="modal-title text-white">Login</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
 
-    <head>
-        <title>Login</title>
+                      <!-- Modal body -->
+                    <div class="modal-body text-center">
+                       
+                        <label for="email">E-Mail</label>
+                        
+                        <br/>
+                            
+                        <div class="row">
+                            
+                            <div class="col-3"></div>
+                            
+                            <input type="email" id="email" name="email" class="form-control" style="width:50%;">
+                            
+                        </div>
+                        
+                        <label for="pass" class="mt-2">Password</label>
+                        
+                        <br/>
+                        
+                        <div class="row">
+                            
+                            <div class="col-3"></div>
+                            
+                            <input type="password" id="pass" name="pass" class="form-control" style="width:50%;">
+                            
+                        </div>
+                        
+                        <div class="custom-control custom-checkbox mt-4">
+                            <input type="checkbox" class="custom-control-input" id="RestaConnesso" name="RestaConnesso">
+                            <label class="custom-control-label" for="RestaConnesso">Resta connesso</label>
+                        </div>
+                        
+                    </div>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        
-        <link href="inc/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <script src="inc/js/bootstrap.min.js" type="text/javascript"></script>
-
-
-        <link href="inc/css/style.css" rel="stylesheet" type="text/css">
-        <script src="inc/js/script.js" type="text/javascript"></script>
-        <script src="inc/js/formVerification.js" type="text/javascript"></script>
-    </head>
-
-    <body>
-        <form id="loginForm" method="post" action="inc/php/loginSystem/sc_login.php">
-            <label for="email">E-Mail</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="pass">Password</label><br>
-            <input type="password" id="pass" name="pass"><br><br>
-            <input type="button" onClick="checkLoginForm();" value="Accedi">
-        </form>
-
-    </body>
-
-</html>
+                    <!-- Modal footer -->
+                
+                    <div class="modal-footer justify-content-center p-4">
+                            <input type="button" onClick="checkRegisterForm()" value="Accedi" class="btn btn-outline-dark mr-4">
+                        <br>
+                            <a href="#" data-toggle="modal" data-target="#Register" data-dismiss="modal">
+                                Non ti sei ancora registrato? Clicca qui per registrarti!
+                            </a>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
