@@ -34,7 +34,7 @@
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c; margin-right:30vw;">Contattaci</a></li>
 
                     <button type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Register">
-                        Registrati
+                        Login
                     </button>
                 </ul>
 
