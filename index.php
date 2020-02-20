@@ -27,12 +27,12 @@
 
                 <ul class="navbar-nav">
 
-                    <li class="nav-item"><a href="index.php" class="nav-link" style="color:black;">Home</a></li>
+                    <li class="nav-item"><a href="index.php" class="nav-link" style="color:black; margin-left:35vw;">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Programmazione</a></li>
                     <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Assistenza</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link" style="color:black;">Contattaci</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" style="color:black; margin-right:30vw;">Contattaci</a></li>
 
-                    <button type="button" class="btn btn-outline-dark" id="nascondiRegister" data-toggle="modal" data-target="#Register">
+                    <button type="button" style="width:8vw;" class="btn btn-outline-dark" id="nascondiRegister" data-toggle="modal" data-target="#Register">
                         Registrati
                     </button>
                 </ul>
