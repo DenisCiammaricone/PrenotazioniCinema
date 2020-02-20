@@ -1,4 +1,3 @@
-
         <!-- Modal -->
         <div class="modal" id="Register">
           <div class="modal-dialog">
@@ -106,11 +105,11 @@
                         <div class="row">
                             
                             <div class="col">
-                                <input type="button" onClick="checkRegisterForm();" class="btn btn-outline-dark mr-4" value="Registrati">
+                                <input type="button" onClick="checkRegisterForm()" class="btn btn-outline-dark mr-4 rimettiNav" value="Registrati">
                             </div>      
                             
                             <div class="col" style="left:100%;">
-                                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Esci</button>
+                                <button type="button" class="btn btn-outline-danger rimettiNav" data-dismiss="modal">Esci</button>
                             </div>
                             
                         </div>
@@ -119,4 +118,4 @@
             </div>
           </div>
         </div>
-        
+        

@@ -9,6 +9,32 @@
 }
 
 
+@media only screen and (min-width:700px)
+{
+    #cellAside
+    {
+        display: none;
+    }
+    
+    #pcNav
+    {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width:700px)
+{
+    #cellAside
+    {
+        display: block;
+    }
+    
+    #pcNav
+    {
+        display:none;
+    }
+}
+
 .no-decoration:focus
 {
     outline: none;
@@ -75,32 +101,4 @@ footer
 .text-white
 {
     color:white;
-}
-
-
-
-@media only screen and (min-width:700px)
-{
-    #cellAside
-    {
-        display: none;
-    }
-    
-    #pcNav
-    {
-        display: flex;
-    }
-}
-
-@media only screen and (max-width:700px)
-{
-    #cellAside
-    {
-        display: block;
-    }
-    
-    #pcNav
-    {
-        display:none;
-    }
 }
