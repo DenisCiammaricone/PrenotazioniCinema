@@ -2,7 +2,7 @@
 <html lang="it"> 
 
     <head>
-        <title>Registrati</title>
+        <title>Log In</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,20 +20,12 @@
     </head>
 
     <body>
-        <form id="registerForm" method="post" action="../php/loginSystem/sc_register.php">
-            <label for="name">* Nome</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="surname">* Cognome</label><br>
-            <input type="text" id="surname" name="surname"><br><br>
-            <label for="email">* E-Mail</label><br>
+        <form id="loginForm" method="post" action="../php/loginSystem/sc_login.php">
+            <label for="email">E-Mail</label><br>
             <input type="email" id="email" name="email"><br><br>
-            <label for="pass">* Password</label><br>
+            <label for="pass">Password</label><br>
             <input type="password" id="pass" name="pass"><br><br>
-            <label for="confirmPass">* Conferma Password</label><br>
-            <input type="password" id="confirmPass" name="confirmPass"><br><br>
-            <input type="checkbox" id="confirmTerms" name="confirmTerms">
-            <label for="confirmTerms">* Accetto i termini di utilizzo</label><br><br>
-            <input type="button" onClick="checkRegisterForm();" value="Registrati">
+            <input type="button" onClick="checkLoginForm();" value="Accedi">
         </form>
 
     </body>
