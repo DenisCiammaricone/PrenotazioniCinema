@@ -44,7 +44,7 @@
                             
                         </div>
               
-                        <label for="email" class="mt-2">
+                        <label for="emailRegister" class="mt-2">
                             <a data-toggle="tooltip" data-placement="right" title="Obbligatorio!">
                                 E-Mail*
                             </a>
@@ -56,11 +56,11 @@
                             
                             <div class="col-3"></div>
                             
-                            <input type="email" id="email" name="email" class="form-control" style="width:50%;">
+                            <input type="email" id="emailRegister" name="emailRegister" class="form-control" style="width:50%;">
                             
                         </div>
                         
-                        <label for="pass" class="mt-2">
+                        <label for="passRegister" class="mt-2">
                             <a data-toggle="tooltip" data-placement="right" title="Obbligatorio!">
                                 Password*
                             </a>
@@ -72,7 +72,7 @@
                             
                             <div class="col-3"></div>
                             
-                            <input type="password" id="pass" name="pass" class="form-control" style="width:50%;">
+                            <input type="password" id="passRegister" name="passRegister" class="form-control" style="width:50%;">
                             
                         </div>
                         

@@ -11,12 +11,12 @@
 
     //Output error in case of empty fields
     if($emptyFieldDetected){
-        echo('
+        echo '
             <script type="text/javascript">
                 alert("Errore nella creazione utente... Riprova! Reindirizzamento...");
             </script>
-        ');
-        header("Location:../../html/register.php");
+        ';
+        header("Location:../../../index.php;refresh:5");
         exit();
     }
 
@@ -28,22 +28,22 @@
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)){
             if(password_verify($pass,$row['user_pass'])){
-                header("Location:../../../index.php");
+                header("Location:../../../index.php;refresh:5");
             } else{
-                echo('
+                echo '
                     <script type="text/javascript">
                         alert("Password non corretta... Riprova!");
                     </script>
-                ');
+                ';
             }
         }
     } else {
-        echo('
+        echo'
             <script type="text/javascript">
                 alert("Nessun utente registrato con questa e-mail... Riprova!");
             </script>
-        ');
+        ';
         
-        header("Location:../../html/login.php");
+        header("Location:../../../index.php;refresh:5");
     }
 ?>

@@ -16,7 +16,15 @@ function checkSurnameValue(){
 
 function checkEmailValue(){
     if(document.getElementById("email").value == ""){
-        alert("E-Mail non inserita");
+        alert("E-Mail non inserita!");
+        return false;
+    }
+    return true;
+}
+
+function checkEmailRegisterValue(){
+    if(document.getElementById("emailRegister").value == ""){
+        alert("E-Mail non inserita!");
         return false;
     }
     return true;
@@ -30,8 +38,16 @@ function checkPassValue(){
     return true;
 }
 
+function checkPassRegisterValue(){
+    if(document.getElementById("passRegister").value == ""){
+        alert("Password non inserita!");
+        return false;
+    }
+    return true;
+}
+
 function checkConfirmPassValue(){
-    if(document.getElementById("confirmPass").value == "" || (document.getElementById("confirmPass").value != document.getElementById("pass").value)){
+    if(document.getElementById("confirmPass").value == "" || (document.getElementById("confirmPass").value != document.getElementById("passRegister").value)){
         alert("Conferma Password non inserita o non valida!");
         return false;
     }
@@ -47,7 +63,7 @@ function checkCofirmTermsValue(){
 }
 
 function checkRegisterForm(){
-    if(checkNameValue() && checkSurnameValue() && checkEmailValue() && checkPassValue() && checkConfirmPassValue() && checkCofirmTermsValue()){
+    if(checkNameValue() && checkSurnameValue() && checkEmailRegisterValue() && checkPassRegisterValue() && checkConfirmPassValue() && checkCofirmTermsValue()){
         document.getElementById("registerForm").submit();
     }
 }
