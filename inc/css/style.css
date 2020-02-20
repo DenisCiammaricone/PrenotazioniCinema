@@ -20,6 +20,11 @@
     {
         display: flex;
     }
+    
+    #telHeader
+    {
+        margin-top:6vh !important;
+    }
 }
 
 @media only screen and (max-width:700px)
@@ -32,7 +37,7 @@
     #pcNav
     {
         display:none;
-    }
+    }    
 }
 
 .no-decoration:focus
@@ -57,8 +62,8 @@
 
 aside
 {
-    left:-0.8em;
-    top: -20vh;
+    left:-1em;
+    top: -35vh;
     float:left;
 }
 
@@ -111,4 +116,14 @@ footer
 .active
 {
     color:black !important;
+}
+
+#bg-goosebumps
+{
+    background-image: url("../img/cinema.jpg");
+     background-repeat: no-repeat;
+     background-position: center;
+    background-size: cover;
+    height: 1056px;
+    width:100vw;
 }

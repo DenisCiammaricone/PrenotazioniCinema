@@ -44,7 +44,7 @@
         <?php include('login.php') ?>
         <?php include('register.php') ?>
         
-        <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" style="padding:1%; margin-top:6vh;">
+        <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" id="telHeader" style="padding:1%;">
             <h1 class="display-4">Benvenuti al cinema Goosebumps</h1>
         </header>
         
@@ -72,35 +72,8 @@
         
         <main class=" mt-4 text-black Opacizable" >
             
-            <section class="text-center">
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-                  <!-- Indicators -->
-                  <ul class="carousel-indicators">
-                    <li data-target="#demo" data-slide-to="0" class="active"></li>
-                    <li data-target="#demo" data-slide-to="1"></li>
-                  </ul>
-
-                  <!-- The slideshow -->
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="inc/img/cinema.jpg" alt="Los Angeles">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="inc/img/film.jpg" alt="Chicago">
-                    </div>
-                  </div>
-
-                  <!-- Left and right controls -->
-                  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                  </a>
-                  <a class="carousel-control-next" href="#demo" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                  </a>
-
-                </div>
-            </section>
+            <div id="bg-goosebumps">s</div>
+            
             <div class="container">
                 <section class="mt-4">
 
