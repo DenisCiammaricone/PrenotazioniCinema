@@ -17,7 +17,7 @@
                 alert("Errore nella creazione utente... Riprova! Reindirizzamento...");
             </script>
         ';
-        header("Location:../../../index.php;refresh:5");
+        header("Location:../../../index.php");
         exit();
     }
 
@@ -25,6 +25,7 @@
             FROM users
            WHERE '$email' = user_email";
     $result = mysqli_query($conn, $q);
+    mysqli_close($conn);
 
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)){
@@ -34,7 +35,7 @@
                     setcookie("email", $email, time() + (86400 * 10), "/");
                     setcookie("pass", $pass, time() + (86400 * 10), "/");
                 }
-                header("Location:../../../index.php;refresh:5");
+                header("Location:../../../index.php");
             } else{
                 echo '
                     <script type="text/javascript">
@@ -50,6 +51,6 @@
             </script>
         ';
         
-        header("Location:../../../index.php;refresh:5");
+        header("Location:../../../index.php");
     }
 ?>

@@ -15,14 +15,55 @@
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/script.js" type="text/javascript"></script>
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
-        
+        <script src="inc/js/checkPhpAutoLogin.js" type="text/javascript"></script>
     </head>
     
     <body>
         <!-- Cookie policy popup -->
         <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#2f2f2f","text":"#ffffff","border":"#ffffff"},"button":{"background":"#626161","text":"#ffffff"}},"position":"bottom-right","corners":"large","margin":"large","transparency":"10","content":{"href":"#","message":"Questo sito utilizza i Cookies per migliorare l'esperienza dell'utente.","button":"Accetto"}})});</script>
         
-        
+        <?php 
+            session_start();
+            require_once("./inc/php/db_connection.php");
+    
+            if(isset($_COOKIE['email']) && isset($_COOKIE['pass'])){
+                $email = $_COOKIE['email'];
+                $pass = $_COOKIE['pass'];
+                echo($email." ".$pass);
+                $q = "SELECT user_email, user_pass
+                    FROM users
+                WHERE '$email' = user_email";
+                $result = mysqli_query($conn, $q);
+                mysqli_close($conn);
+                
+                if (mysqli_num_rows($result) > 0) {
+                    while($row = mysqli_fetch_array($result)){
+                        if(password_verify($pass,$row['user_pass'])){
+                            //header("Location:../../../index.php");
+                            $_SESSION["logged"] = "true";   
+                        } else{
+                            echo '
+                                <script type="text/javascript">
+                                    alert("Errore di LogIn Automatico!");
+                                </script>
+                            ';
+                            header("Location:../../../index.php");
+                            $_SESSION["logged"] = "false";
+                        }
+                    }
+                } else {
+                    echo'
+                        <script type="text/javascript">
+                            alert("Errore di LogIn Automatico!");
+                        </script>
+                    ';
+                    
+                    header("Location:../../../index.php");
+                    $_SESSION["logged"] = "false";
+                }
+            }
+        ?>
+
         <div class="fixed top" style="width:100%; z-index:9;" >
             <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh; ">
 
@@ -33,8 +74,20 @@
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Assistenza</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c; margin-right:25vw;">Contattaci</a></li>
 
-                    <button type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">
-                        Login
+                    <button id="loginButton" type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">
+                        <?php 
+                            if(isset($_SESSION['logged'])){
+                                if($_SESSION['logged'] == "true"){ 
+                                    echo("Log out");
+                                }
+                                else{ 
+                                    echo("LogIn");
+                                }
+                            } else {
+                                echo("LogIn");
+                            }
+                                
+                        ?>
                     </button>
                 </ul>
 
