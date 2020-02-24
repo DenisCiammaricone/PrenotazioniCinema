@@ -2,7 +2,7 @@
         <div class="modal" id="Register">
           <div class="modal-dialog">
             <div class="modal-content">
-                <form id="registerForm" method="post" action="inc/php/loginSystem/sc_register.php" class="form-group">
+                <form id="registerForm" method="post" action="inc/php/loginSystem/sc_register.php">
                       <!-- Modal Header -->
                       <div class="modal-header bg-secondary">
                         <h4 class="modal-title text-white">Registrazione</h4>
@@ -20,7 +20,7 @@
                         
                         <br/>
                             
-                        <div class="row">
+                        <div class="row form-group">
                             
                             <div class="col-3"></div>
                             
@@ -36,7 +36,7 @@
                         
                         <br/>
                         
-                        <div class="row">
+                        <div class="row form-group">
                             
                             <div class="col-3"></div>
                             
@@ -52,7 +52,7 @@
                         
                         <br/>
                             
-                        <div class="row">
+                        <div class="row form-group">
                             
                             <div class="col-3"></div>
                             
@@ -68,7 +68,7 @@
                         
                         <br/>
                             
-                        <div class="row">
+                        <div class="row form-group">
                             
                             <div class="col-3"></div>
                             
@@ -85,7 +85,7 @@
                         
                         <br/>
                             
-                        <div class="row">
+                        <div class="row form-group">
                             
                             <div class="col-3"></div>
                             

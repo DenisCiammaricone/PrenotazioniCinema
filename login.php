@@ -1,7 +1,7 @@
 <div class="modal" id="Login">
           <div class="modal-dialog">
             <div class="modal-content">
-                <form id="loginForm" method="post" action="inc/php/loginSystem/sc_login.php" class="form-group">
+                <form id="loginForm" method="post" action="inc/php/loginSystem/sc_login.php">
                       <!-- Modal Header -->
                       <div class="modal-header bg-secondary">
                         <h4 class="modal-title text-white">Login</h4>
@@ -15,7 +15,7 @@
                         
                         <br/>
                             
-                        <div class="row">
+                        <div class="row form-group">
                             
                             <div class="col-3"></div>
                             
@@ -27,7 +27,7 @@
                         
                         <br/>
                         
-                        <div class="row">
+                        <div class="row form-group">
                             
                             <div class="col-3"></div>
                             
@@ -47,7 +47,7 @@
                     <div class="modal-footer " style="display:block;">
                         
                         <div class="row justify-content-center">
-                            <input type="button" onClick="checkLoginForm()" value="Accedi" class="btn btn-outline-dark mb-2">
+                            <input type="button" onClick="checkLoginForm()" value="accedi" class="btn btn-outline-dark mb-2">
                         </div>
                         
                         <div class="row justify-content-center">
