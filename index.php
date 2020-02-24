@@ -23,7 +23,7 @@
             include("menu.php");
         ?>
         
-        <main class=" mt-4 text-black Opacizable" >
+        <main class="mt-4 text-black Opacizable" >
             
             <div id="bg-goosebumps">s</div>
             
