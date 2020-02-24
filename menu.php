@@ -56,7 +56,7 @@
                         <?php 
                             if(isset($_SESSION['logged'])){
                                 if($_SESSION['logged'] == "true"){ 
-                                    echo('<a id="loginButton" href="logout.php" type="button" style="width:8vw;" class="btn btn-outline-dark">Logout</a>');
+                                    echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw;" class="btn btn-outline-dark">Logout</a>');
                                 }
                                 else{ 
                                     echo('<button id="loginButton" type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');

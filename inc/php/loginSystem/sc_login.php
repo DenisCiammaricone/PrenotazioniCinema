@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once("../db_connection.php");
 
     $email = mysqli_real_escape_string($conn,$_POST['email']);
@@ -30,7 +31,7 @@
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)){
             if(password_verify($pass,$row['user_pass'])){
-                $_SESSION["logged"] = "true"; 
+                $_SESSION["logged"] = "true";
                 //Cookies last 10day 
                 if(isset($keepConn)){
                     setcookie("email", $email, time() + (86400 * 10), "/");
