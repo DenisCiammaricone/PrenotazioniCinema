@@ -51,7 +51,7 @@
                      VALUES ('$name','$surname','$email','$pass')";
     
 
-    $result = mysqli_query($conn, $q)
+    $result = mysqli_query($conn, $q);
     
     header("Location:../../../index.php");
     
