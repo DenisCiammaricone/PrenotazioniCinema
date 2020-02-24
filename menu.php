@@ -8,7 +8,6 @@
             if(isset($_COOKIE['email']) && isset($_COOKIE['pass'])){
                 $email = $_COOKIE['email'];
                 $pass = $_COOKIE['pass'];
-                echo($email." ".$pass);
                 $q = "SELECT user_email, user_pass
                     FROM users
                 WHERE '$email' = user_email";
