@@ -18,7 +18,7 @@
                 alert("Errore nella creazione utente... Riprova! Reindirizzamento...");
             </script>
         ';
-        header("Location:../../../index.php");
+        header("Refresh:0; url=../../../index.php");
         exit();
     }
 
@@ -37,7 +37,7 @@
                     setcookie("email", $email, time() + (86400 * 10), "/");
                     setcookie("pass", $pass, time() + (86400 * 10), "/");
                 }
-                header("Location:../../../index.php");
+                header("Refresh:0; url=../../../index.php");
             } else{
                 echo '
                     <script type="text/javascript">
@@ -53,6 +53,6 @@
             </script>
         ';
         
-        header("Location:../../../index.php");
+        header("Refresh:0; url=../../../index.php");
     }
 ?>
