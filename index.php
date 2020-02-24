@@ -19,11 +19,10 @@
     </head>
     
     <body>
-        <?php 
-        include("menu.php");
+        
+        <?php
+            include("menu.php");
         ?>
-        
-        
         
         <main class=" mt-4 text-black Opacizable" >
             

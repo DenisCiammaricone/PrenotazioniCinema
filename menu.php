@@ -53,21 +53,21 @@
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Assistenza</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c; margin-right:25vw;">Contattaci</a></li>
 
-                    <button id="loginButton" type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">
+                    
                         <?php 
                             if(isset($_SESSION['logged'])){
                                 if($_SESSION['logged'] == "true"){ 
-                                    echo("Log out");
+                                    echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw;" class="btn btn-outline-dark">Logout</a>');
                                 }
                                 else{ 
-                                    echo("LogIn");
+                                    echo('<button id="loginButton" type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
                                 }
                             } else {
-                                echo("LogIn");
+                                echo('<button id="loginButton" type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
                             }
                                 
                         ?>
-                    </button>
+                    
                 </ul>
 
             </nav>
