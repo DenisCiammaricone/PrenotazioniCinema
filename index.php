@@ -15,8 +15,6 @@
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/script.js" type="text/javascript"></script>
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
-        
-        <script src="inc/js/checkPhpAutoLogin.js" type="text/javascript"></script>
     </head>
     
     <body>
