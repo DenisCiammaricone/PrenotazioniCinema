@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it">
     <head>
-        <title>Admin | Cinema Goosebumps</title>
+        <title>Admin | Login</title>
         
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
