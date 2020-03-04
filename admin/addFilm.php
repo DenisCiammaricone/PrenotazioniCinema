@@ -30,7 +30,11 @@
             <label for="durata">Durata: </label>
             <input type="number"  id="durata" name="durata"><br><br>
             <label for="genere">Genere: </label>
-            <input type="text"  id="genere" name="genere"><br><br>
+            <select id="genere" name="genere">
+                <?php
+                    include("php/sc_caricaGeneri.php");
+                ?>
+            </select><br><br>
             <label for="nomeRegista">Nome Regista: </label>
             <input type="text"  id="nomeRegista" name="nomeRegista"><br><br>
             <label for="cognomeRegista">Cognome Regista: </label>

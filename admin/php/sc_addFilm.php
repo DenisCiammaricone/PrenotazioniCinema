@@ -10,7 +10,7 @@
     $cognReg = $_POST['cognomeRegista'];
 
     $dirLocandine = "../locandine/";
-    $fileName = $dirLocandine."aaa.png";
+    $fileName = $dirLocandine.basename($_FILES["fileToUpload"]["name"]);
 
     if (move_uploaded_file($_FILES['locandina']['tmp_name'], $fileName)) {
         echo "File caricato con successo.";
