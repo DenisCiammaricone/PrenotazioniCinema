@@ -72,8 +72,8 @@
             </nav>
         </div>
         
-        <?php include('login.php') ?>
-        <?php include('register.php') ?>
+        <?php include('inc/php/incs/login.php') ?>
+        <?php include('inc/php/incs/register.php') ?>
         
         <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" id="telHeader" style="padding:1%;">
             <h1 class="display-4">Benvenuti al cinema Goosebumps</h1>

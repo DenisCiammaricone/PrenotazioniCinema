@@ -40,13 +40,13 @@ session_start();
             else
             {
             echo '<p>Password o email errate</p>
-                  <a type="button" href="../../../index.php" class="btn btn-outline-danger" data-dismiss="modal">Ok</a>';
+                  <a type="button" href="../../../index.php" class="btn btn-outline-danger">Ok</a>';
         	}
         }
     } else {
         echo'
                   <p>Password o email errate</p>
-                  <a type="button" href="../../../index.php" class="btn btn-outline-danger" data-dismiss="modal">Ok</a>
+                  <a type="button" href="../../../index.php" class="btn btn-outline-danger">Ok</a>
 
         ';
         

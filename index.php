@@ -25,7 +25,7 @@
         
         <main class="mt-4 text-black Opacizable" >
             
-            <div id="bg-goosebumps">s</div>
+            <div id="bg-goosebumps"></div>
             
             <div class="container">
                 <section class="mt-4">
