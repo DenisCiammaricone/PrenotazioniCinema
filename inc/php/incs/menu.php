@@ -42,7 +42,7 @@
             }
         ?>
 
-        <div class="fixed top" style="width:100%; z-index:9;" >
+        <div class="fixed top pagina" style="width:100%; z-index:9;" >
             <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh; ">
 
                 <ul class="navbar-nav">
@@ -75,14 +75,12 @@
         <?php include('inc/php/incs/login.php') ?>
         <?php include('inc/php/incs/register.php') ?>
 
-        <!--
-            <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" id="telHeader" style="padding:1%;">
-                <h1 class="display-4">Benvenuti al cinema Goosebumps</h1>
-            </header>
-        -->
+        <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable pagina" id="telHeader" style="padding:1%;">
+            <h1 class="display-4">Benvenuti al cinema Goosebumps</h1>
+        </header>
         
         
-        <div class="fixed" id="cellAside">
+        <div class="fixed pagina" id="cellAside">
             <aside class="navbar navbar-light">
 
                     <button class="navbar-toggler no-decoration" id="toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

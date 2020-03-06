@@ -20,10 +20,10 @@
     <body>
         
         <?php
-            /*include("inc/php/incs/menu.php");*/
+            include("inc/php/incs/menu.php");
         ?>
         
-        <!--<main class="mt-4 text-black Opacizable" >-->
+        
             
             <div id="bg-goosebumps">
                 
@@ -33,8 +33,7 @@
                 
             </div>
             
-            <!--
-            
+        <main class="mt-4 text-black Opacizable pagina">
             <div class="container">
                 <section class="mt-4">
 
@@ -43,7 +42,7 @@
                         <hr>
                         <div class="card-deck" style="color:black;">
 
-                            <!-- Primo spettacolo --\>
+                            <!-- Primo spettacolo -->
                             <div class="card" style="width:10vw;">
 
                               <img class="card-img-top" src="img_avatar1.png" alt="Card image">
@@ -56,21 +55,7 @@
 
                             </div>
 
-                            <!-- Secondo spettacolo --\>
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
-                            <!-- Terzo spettacolo --\>
+                            <!-- Secondo spettacolo -->
 
                             <div class="card" style="width:10vw;">
 
@@ -84,7 +69,7 @@
 
                             </div>
 
-                            <!-- Quarto spettacolo --\>
+                            <!-- Terzo spettacolo -->
 
                             <div class="card" style="width:10vw;">
 
@@ -98,7 +83,21 @@
 
                             </div>
 
-                            <!-- Quinto spettacolo --\>
+                            <!-- Quarto spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Quinto spettacolo -->
 
                             <div class="card" style="width:10vw;">
 
@@ -121,7 +120,7 @@
 
                         <div class="card-deck" style="color:black;">
 
-                            <!-- Primo spettacolo --\>
+                            <!-- Primo spettacolo -->
                             <div class="card" style="width:10vw;">
 
                               <img class="card-img-top" src="img_avatar1.png" alt="Card image">
@@ -134,21 +133,7 @@
 
                             </div>
 
-                            <!-- Secondo spettacolo --\>
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
-                            <!-- Terzo spettacolo --\>
+                            <!-- Secondo spettacolo -->
 
                             <div class="card" style="width:10vw;">
 
@@ -162,7 +147,7 @@
 
                             </div>
 
-                            <!-- Quarto spettacolo --\>
+                            <!-- Terzo spettacolo -->
 
                             <div class="card" style="width:10vw;">
 
@@ -176,7 +161,21 @@
 
                             </div>
 
-                            <!-- Quinto spettacolo --\>
+                            <!-- Quarto spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Quinto spettacolo -->
 
                             <div class="card" style="width:10vw;">
 
@@ -195,7 +194,7 @@
                 </section>
             </div>
         </main>
-        <footer class="text-light pt-2 pr-4 Opacizable">
+        <footer class="text-light pt-2 pr-4 Opacizable pagina">
             <div class="card-deck text-center">
                 
                 <div class="card dark-footer" style="width:20vw;">
@@ -231,7 +230,7 @@
                 
             </div>
         </footer>
-        -->
+
         <script>
             $(document).ready(function(){
               $('[data-toggle="tooltip"]').tooltip();
