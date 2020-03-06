@@ -25,7 +25,7 @@
                 alert("Errore nella creazione utente... Riprova! Reindirizzamento...");
             </script>
         ');
-        header("Location:../../../index.php");
+        header("Location:../../../pagina.php");
         
         exit();
     }
@@ -42,7 +42,7 @@
                 alert("Utente con queste credenziali già creato!");
             </script>
         ');
-        header("Location:../../../index.php");
+        header("Location:../../../pagina.php");
         exit();
     }
 
@@ -53,6 +53,6 @@
 
     $result = mysqli_query($conn, $q);
     mysqli_close($conn);
-    echo '<script language="javascript">window.location.href ="../../../index.php"</script>';
+    echo '<script language="javascript">window.location.href ="../../../pagina.php"</script>';
     
 ?>

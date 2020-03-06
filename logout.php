@@ -5,6 +5,6 @@ session_destroy();
 
 setcookie("email", $email, time() - (2000), "/");
 
-header("Location:index.php");
+header("Location:pagina.php");
 
 ?>

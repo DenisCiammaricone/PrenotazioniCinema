@@ -26,15 +26,17 @@ $(document).ready(
                 $('#bg-goosebumps').css('transform','scale3d(4,4,2)');
                 $('body').css('overflow-y','hidden');
                 $('#bg-goosebumps').fadeTo(1500,0);
+                sessionStorage.marketing = 0;
                 window.setTimeout(entra,2000);
                 
         });
         
         function entra(){
             
-            $('#bg-goosebumps').css('display','none');
+            //$('#bg-goosebumps').css('display','none');
             
-            $('.pagina').css('display','inherit').fadeTo(1000,1);
+            window.location.href="pagina.php";
+            
         };
         
     });
