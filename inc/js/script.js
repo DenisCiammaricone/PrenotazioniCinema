@@ -19,5 +19,11 @@ $(document).ready(
                 
             });
             
-
+        
+        $('#benvenuto').click(
+            function(){
+                $('#benvenuto').css('display', 'none');
+                $('#bg-goosebumps').css('transform','scale3d(4,4,2)');
+                $('body').css('overflow-y','hidden');
+        });
     });

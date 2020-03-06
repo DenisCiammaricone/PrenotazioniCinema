@@ -74,10 +74,12 @@
         
         <?php include('inc/php/incs/login.php') ?>
         <?php include('inc/php/incs/register.php') ?>
-        
-        <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" id="telHeader" style="padding:1%;">
-            <h1 class="display-4">Benvenuti al cinema Goosebumps</h1>
-        </header>
+
+        <!--
+            <header class="jumbotron jumbotron-fluid container-fluid text-center Opacizable" id="telHeader" style="padding:1%;">
+                <h1 class="display-4">Benvenuti al cinema Goosebumps</h1>
+            </header>
+        -->
         
         
         <div class="fixed" id="cellAside">
