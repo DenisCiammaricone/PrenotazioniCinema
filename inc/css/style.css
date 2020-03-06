@@ -123,6 +123,11 @@ footer
     color:black !important;
 }
 
+body
+{
+    overflow-x: hidden;
+}
+
 #bg-goosebumps
 {
     background-image: url("../img/cinema.jpg");
@@ -134,17 +139,11 @@ footer
     transition: transform 2s;
 }
 
-body
-{
-    overflow-x: hidden;
-}
-
 #benvenuto
 {
     color:#2f2f2f !important; 
     width:20vw !important; 
     font-size:34px !important;
-    
 }
 
 #benvenuto:hover
