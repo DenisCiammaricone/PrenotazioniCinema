@@ -20,7 +20,7 @@
     <body>
         
         <?php
-            include("menu.php");
+            include("inc/php/incs/menu.php");
         ?>
         
         <main class="mt-4 text-black Opacizable" >
