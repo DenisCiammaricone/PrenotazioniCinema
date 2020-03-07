@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{index.php} !-d
+RewriteCond %{index.php} !-f
+RewriteRule ^(([A-Za-z0-9\-]+/)*[A-Za-z0-9\-]+)?$ $1.php

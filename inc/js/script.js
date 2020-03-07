@@ -1,5 +1,4 @@
-
-    function sos(){
+function sos(){
         
         if(sessionStorage.benvenuto == 1)
         {
@@ -52,6 +51,8 @@ $(document).ready(
             
             $('.pagina').fadeTo(1000,1);
         };
+        
+    
     });
 
 

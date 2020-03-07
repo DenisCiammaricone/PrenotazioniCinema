@@ -47,7 +47,7 @@
 
                 <ul class="navbar-nav">
 
-                    <li class="nav-item"><a href="index.php" class="nav-link active text-darkgray" style="margin-left:35vw;">Home</a></li>
+                    <li class="nav-item"><a href="index" class="nav-link active text-darkgray" style="margin-left:35vw;">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Programmazione</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c;">Assistenza</a></li>
                     <li class="nav-item"><a href="#" class="nav-link text-darkgray" style="color:#4c4c4c; margin-right:25vw;">Contattaci</a></li>
@@ -89,7 +89,7 @@
 
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav pt-2 pb-4 pl-4 pr-2">
-                            <li class="nav-item"><a class="nav-link" href="index.php" style="color:black;">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index" style="color:black;">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Programmazione</a></li>
                             <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Assistenza</a></li>
                             <li class="nav-item"><a class="nav-link" href="#" style="color:black;">Contattaci</a></li>
