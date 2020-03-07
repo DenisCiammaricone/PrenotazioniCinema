@@ -1,12 +1,16 @@
-$(document).ready(
-    
-    function() {
+
+    function sos(){
         
         if(sessionStorage.benvenuto == 1)
         {
-            $('#bg-goosebumps').css('display','none');
             $('.pagina').css('display','inherit');
         }
+        
+    };
+
+$(document).ready(
+    
+    function() {
         
         var asideOpen = 0;
         
@@ -25,7 +29,11 @@ $(document).ready(
                 }
                 
             });
-            
+        
+        if(sessionStorage.benvenuto !=1)
+        {
+            $('#bg-goosebumps').css('display','inherit');
+        }
         
         $('#benvenuto').click(
             function(){
@@ -44,5 +52,6 @@ $(document).ready(
             
             $('.pagina').fadeTo(1000,1);
         };
-        
     });
+
+

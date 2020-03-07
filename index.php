@@ -18,22 +18,13 @@
     </head>
     
     <body>
-            
-        <div id="bg-goosebumps">
-
-            <div class="text-center" id="benvDiv">
-                <a href="#" type="button" class="display-4 btn btn-outline-light" id="benvenuto">Benvenuto</a>
-            </div>
-
-        </div>
-            
+        
         <?php
             include("inc/php/incs/menu.php");
         ?>
         
         <main class="mt-4 text-black Opacizable pagina">
-            
-            <div class=" mt-4 container">
+            <div class="mt-4 container">
                 <section>
                     <article class="mb-4">
                         <h3 class="text-center"><i>In programmazione oggi</i></h3>
@@ -192,6 +183,7 @@
                 </section>
             </div>
         </main>
+        
         <footer class="text-light pt-2 pr-4 Opacizable pagina" style="clear:both;">
             <div class="card-deck text-center">
                 
@@ -228,10 +220,23 @@
                 
             </div>
         </footer>
+        
         <script>
             $(document).ready(function(){
               $('[data-toggle="tooltip"]').tooltip();
             });
+            
+            window.setTimeout(sos,1);
         </script>
+        
+        <div id="bg-goosebumps">
+
+            <div class="text-center" id="benvDiv">
+                <a href="#" type="button" class="display-4 btn btn-outline-light" id="benvenuto">Benvenuto</a>
+            </div>
+
+        </div>
+            
+        
     </body>
 </html>
