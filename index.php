@@ -27,8 +27,11 @@
             <div class="mt-4 container">
                 <section>
                     <article class="mb-4">
+                        
                         <h3 class="text-center"><i>In programmazione oggi</i></h3>
+                        
                         <hr>
+                        
                         <div class="card-deck" style="color:black;">
 
                             <!-- Primo spettacolo -->
