@@ -15,7 +15,7 @@ session_start();
     if($emptyFieldDetected){
         echo '
                   <p>Riempi i campi</p>
-                  <a type="button" href="../../../pagina.php" class="btn btn-outline-danger">Ok</a>
+                  <a type="button" href="../../../index.php" class="btn btn-outline-danger">Ok</a>
 
         ';
     }
@@ -35,18 +35,18 @@ session_start();
                     setcookie("email", $email, time() + (86400 * 10), "/");
                     setcookie("pass", $pass, time() + (86400 * 10), "/");
                 }
-                header("Location:../../../pagina.php");
+                header("Location:../../../index.php");
             }
             else
             {
             echo '<p>Password o email errate</p>
-                  <a type="button" href="../../../pagina.php" class="btn btn-outline-danger">Ok</a>';
+                  <a type="button" href="../../../index.php" class="btn btn-outline-danger">Ok</a>';
         	}
         }
     } else {
         echo'
                   <p>Password o email errate</p>
-                  <a type="button" href="../../../pagina.php" class="btn btn-outline-danger">Ok</a>
+                  <a type="button" href="../../../index.php" class="btn btn-outline-danger">Ok</a>
 
         ';
         

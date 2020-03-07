@@ -12,8 +12,8 @@
         <link href="inc/css/bootstrap.min.css" rel="stylesheet" type="text/css">
         <script src="inc/js/bootstrap.min.js" type="text/javascript"></script>
         
-        <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/script.js" type="text/javascript"></script>
+        <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
     </head>
     
@@ -27,5 +27,245 @@
 
         </div>
             
+
+        <?php
+            include("inc/php/incs/menu.php");
+        ?>
+        
+        <main class="mt-4 text-black Opacizable pagina">
+            
+            <div class=" mt-3 content-1">
+                <section class="recensioni bg-info">
+                    <div class="text-center mt-3">
+                        <h5 class="text-warning"><b>Ultime recensioni</b></h5>
+                        
+                        <div class="media border p-3" >
+                          <img src="inc/img/avatar_prova.png" alt="Avatar prova" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+                          <div class="media-body" >
+                            <span class="UserName"><i>Napolethanos</i></span>
+                            <p>Lorem ipsum...</p>
+                            <small><i>Postato il 07/03/2020</i></small>
+                          </div>
+                        </div>
+                        <div class="media border p-3" >
+                          <img src="inc/img/avatar_prova.png" alt="Avatar prova" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+                          <div class="media-body" >
+                            <span class="UserName"><i>Napolethanos</i></span>
+                            <p>Lorem ipsum...</p>
+                            <small><i>Postato il 07/03/2020</i></small>
+                          </div>
+                        </div>
+                        <div class="media border p-3" >
+                          <img src="inc/img/avatar_prova.png" alt="Avatar prova" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+                          <div class="media-body" >
+                            <span class="UserName"><i>Napolethanos</i></span>
+                            <p>Lorem ipsum...</p>
+                            <small><i>Postato il 07/03/2020</i></small>
+                          </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="content-main">
+                <section>
+                    <article class="mb-4">
+                        <h3 class="text-center"><i>In programmazione oggi</i></h3>
+                        <hr>
+                        <div class="card-deck" style="color:black;">
+
+                            <!-- Primo spettacolo -->
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Secondo spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Terzo spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Quarto spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Quinto spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title">Prova</h4>
+                                  <p class="card-text">Giusto per prova</p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="mb-4">
+                        <h3 class="text-center"><i>Prossimi spettacoli</i></h3>
+                        <hr>
+
+                        <div class="card-deck" style="color:black;">
+
+                            <!-- Primo spettacolo -->
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Secondo spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Terzo spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Quarto spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title"></h4>
+                                  <p class="card-text"></p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                            <!-- Quinto spettacolo -->
+
+                            <div class="card" style="width:10vw;">
+
+                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+
+                              <div class="card-body">
+                                  <h4 class="card-title">Prova</h4>
+                                  <p class="card-text">Giusto per prova</p>
+                                  <a href="#" class="stretched-link"></a>
+                              </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </main>
+        <footer class="text-light pt-2 pr-4 Opacizable pagina" style="clear:both;">
+            <div class="card-deck text-center">
+                
+                <div class="card dark-footer" style="width:20vw;">
+
+                  <div class="card-body">
+                      <p class="card-text">CopyRight @2019</p>
+                  </div>
+
+                </div>
+                
+                <div class="card dark-footer" style="width:20vw;">
+
+                          <div class="card-body">
+                              <p class="card-text">Giusto per prova</p>
+                          </div>
+
+                </div>
+                
+                <div class="card dark-footer" style="width:20vw;">
+
+                          <div class="card-body">
+                              <p class="card-text"><b>Made by</b><br>
+                                    <i>Ciammaricone Denis</i><br>
+                                    <i>Di Simone Andrea</i><br>
+                                    <i>Lotorio Luca</i><br>
+                                    <i>Stortini Corrado</i><br>
+                                    <i>Tupitti Leonardo</i><br>
+                                    <i>Vetuschi Luigi</i>
+                              </p>
+                          </div>
+
+                </div>
+                
+            </div>
+        </footer>
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
     </body>
 </html>

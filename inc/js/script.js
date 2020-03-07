@@ -1,8 +1,15 @@
 $(document).ready(
-
+    
     function() {
+        
+        if(sessionStorage.benvenuto == 1)
+        {
+            $('#bg-goosebumps').css('display','none');
+            $('.pagina').css('display','inherit');
+        }
+        
         var asideOpen = 0;
-        $('.pagina').css('opacity','0');
+        
         $('#toggle').click(
             
             function(){
@@ -25,18 +32,17 @@ $(document).ready(
                 $('#benvenuto').css('display', 'none');
                 $('#bg-goosebumps').css('transform','scale3d(4,4,2)');
                 $('body').css('overflow-y','hidden');
-                $('#bg-goosebumps').fadeTo(1500,0);
-                sessionStorage.marketing = 0;
-                window.setTimeout(entra,2000);
+                $('#bg-goosebumps').fadeTo(1300,0);
+                sessionStorage.benvenuto = 1;
+                window.setTimeout(entra,1300);
                 
         });
         
         function entra(){
             
-            //$('#bg-goosebumps').css('display','none');
+            $('#bg-goosebumps').css('display','none');
             
-            window.location.href="pagina.php";
-            
+            $('.pagina').fadeTo(1000,1);
         };
         
     });
