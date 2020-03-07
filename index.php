@@ -21,13 +21,12 @@
             
         <div id="bg-goosebumps">
 
-            <div class="text-center" id="benvDiv" style="">
+            <div class="text-center" id="benvDiv">
                 <a href="#" type="button" class="display-4 btn btn-outline-light" id="benvenuto">Benvenuto</a>
             </div>
 
         </div>
             
-
         <?php
             include("inc/php/incs/menu.php");
         ?>
