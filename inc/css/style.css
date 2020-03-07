@@ -162,38 +162,3 @@ body
     position:relative; 
     top:50%;
 }
-
-.content-1
-{
-    float:left; 
-    display:block; 
-    width:18vw;
-    margin-right:2.5vw;
-}
-
-.content-main
-{
-    float:left; 
-    display:block; 
-    width:58vw;
-    margin-right:2vw;
-}
-
-.recensioni
-{
-    border: 1px solid black;
-    height: 100%;
-    margin-left:2vw;
-    background-color: red;
-}
-
-.UserName
-{
-    font-size:21px;
-}
-
-.media
-{
-    border: none !important;
-    border-bottom: 1px solid #cccccc !important;
-}

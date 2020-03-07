@@ -33,40 +33,7 @@
         
         <main class="mt-4 text-black Opacizable pagina">
             
-            <div class=" mt-3 content-1">
-                <section class="recensioni bg-info">
-                    <div class="text-center mt-3">
-                        <h5 class="text-warning"><b>Ultime recensioni</b></h5>
-                        
-                        <div class="media border p-3" >
-                          <img src="inc/img/avatar_prova.png" alt="Avatar prova" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-                          <div class="media-body" >
-                            <span class="UserName"><i>Napolethanos</i></span>
-                            <p>Lorem ipsum...</p>
-                            <small><i>Postato il 07/03/2020</i></small>
-                          </div>
-                        </div>
-                        <div class="media border p-3" >
-                          <img src="inc/img/avatar_prova.png" alt="Avatar prova" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-                          <div class="media-body" >
-                            <span class="UserName"><i>Napolethanos</i></span>
-                            <p>Lorem ipsum...</p>
-                            <small><i>Postato il 07/03/2020</i></small>
-                          </div>
-                        </div>
-                        <div class="media border p-3" >
-                          <img src="inc/img/avatar_prova.png" alt="Avatar prova" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-                          <div class="media-body" >
-                            <span class="UserName"><i>Napolethanos</i></span>
-                            <p>Lorem ipsum...</p>
-                            <small><i>Postato il 07/03/2020</i></small>
-                          </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            
-            <div class="content-main">
+            <div class=" mt-4 container">
                 <section>
                     <article class="mb-4">
                         <h3 class="text-center"><i>In programmazione oggi</i></h3>
