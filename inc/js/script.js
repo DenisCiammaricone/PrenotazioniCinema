@@ -2,7 +2,8 @@ function sos(){
         
         if(sessionStorage.benvenuto == 1)
         {
-            $('.pagina').css('display','inherit');
+            $('.pagina').css('display','block');
+            $('*').css('overflow-y','visible');
         }
         
     };
@@ -38,7 +39,7 @@ $(document).ready(
             function(){
                 $('#benvenuto').css('display', 'none');
                 $('#bg-goosebumps').css('transform','scale3d(4,4,2)');
-                $('body').css('overflow-y','hidden');
+                
                 $('#bg-goosebumps').fadeTo(1300,0);
                 sessionStorage.benvenuto = 1;
                 window.setTimeout(entra,1300);
@@ -48,7 +49,7 @@ $(document).ready(
         function entra(){
             
             $('#bg-goosebumps').css('display','none');
-            
+            $('*').css('overflow-y','visible');
             $('.pagina').fadeTo(1000,1);
         };
         

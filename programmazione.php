@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+?>
+
 <!doctype html>
 <html lang="it">
     <head>
@@ -15,9 +21,35 @@
         <script src="inc/js/script.js" type="text/javascript"></script>
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
+        <script src="inc/js/adjustFooter.js" type="text/javascript"></script>
+        <link href="inc/img/logo.png" rel="icon" type="image/png">
     </head>
     
     <body>
+        <?php
+            if(isset($_SESSION['benvenuto']))
+            {
+                $active = 2;
+                include("inc/php/incs/menu.php");
+            
+        ?>
+        
+        <?php 
+            
+                
+                include("inc/php/incs/footer.php");
+            }
+            else
+            {
+                echo "<script language=javascript>window.location.href='index'</script>";
+            }
+                
+        ?>
+        
+        <script>
+            $('.pagina').css('display','block');
+            $('*').css('overflow-y','visible');
+        </script>
         
     </body>
 </html>

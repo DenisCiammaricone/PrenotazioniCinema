@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+
+?>
+
 <!doctype html>
 <html lang="it">
     <head>
@@ -15,11 +21,14 @@
         <script src="inc/js/script.js" type="text/javascript"></script>
         <link href="inc/css/style.css" rel="stylesheet" type="text/css">
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
+        <script src="inc/js/adjustFooter.js" type="text/javascript"></script>
+        <link href="inc/img/logo.png" rel="icon" type="image/png">
     </head>
     
     <body>
         
         <?php
+            $active = 1; //dico che mi trovo su home
             include("inc/php/incs/menu.php");
         ?>
         
@@ -187,59 +196,46 @@
             </div>
         </main>
         
-        <footer class="text-light pt-2 pr-4 Opacizable pagina" style="clear:both;">
-            <div class="card-deck text-center">
-                
-                <div class="card dark-footer" style="width:20vw;">
-
-                  <div class="card-body">
-                      <p class="card-text">CopyRight @2019</p>
-                  </div>
-
-                </div>
-                
-                <div class="card dark-footer" style="width:20vw;">
-
-                      <div class="card-body">
-                          <p class="card-text">Giusto per prova</p>
-                      </div>
-
-                </div>
-                
-                <div class="card dark-footer" style="width:20vw;">
-
-                      <div class="card-body">
-                          <p class="card-text"><b>Made by</b><br>
-                                <i>Ciammaricone Denis</i><br>
-                                <i>Di Simone Andrea</i><br>
-                                <i>Lotorio Luca</i><br>
-                                <i>Stortini Corrado</i><br>
-                                <i>Tupitti Leonardo</i><br>
-                                <i>Vetuschi Luigi</i>
-                          </p>
-                      </div>
-                    
-                </div>
-                
-            </div>
-        </footer>
+        <?php include("inc/php/incs/footer.php");?>
         
         <script>
             $(document).ready(function(){
               $('[data-toggle="tooltip"]').tooltip();
             });
             
-            window.setTimeout(sos,1);
+            window.setTimeout(sos,0);
+            
+            
+            
         </script>
         
         <div id="bg-goosebumps">
-
+            
             <div class="text-center" id="benvDiv">
-                <a href="#" type="button" class="display-4 btn btn-outline-light" id="benvenuto">Benvenuto</a>
+                <div class="row text-center container-fluid mb-4">
+                    <div class="col-4"></div>
+                    <div class="col-1">
+                        <img src="inc/img/logo2.png">
+                    </div>
+                    <div class="col-2">
+                        <h1 class="display-4" id="logo">Goosebumps</h1>
+                    </div>
+                </div>
+                <button type="button" class="display-4 btn btn-outline-light" id="benvenuto">Benvenuto</button>
             </div>
 
         </div>
+        
+        <script>
+        
+            $('#benvenuto').click(
+                function(){
+                    
+                    <?php $_SESSION['benvenuto'] = 1;?>
+                    
+                });
             
+        </script>
         
     </body>
 </html>
