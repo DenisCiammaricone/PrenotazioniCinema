@@ -211,19 +211,17 @@
         
         <div id="bg-goosebumps">
             
-            <div class="text-center" id="benvDiv">
-                <div class="row text-center container-fluid mb-4">
-                    <div class="col-4"></div>
-                    <div class="col-1">
-                        <img src="inc/img/logo2.png">
-                    </div>
-                    <div class="col-2">
-                        <h1 class="display-4" id="logo">Goosebumps</h1>
-                    </div>
-                </div>
-                <button type="button" class="display-4 btn btn-outline-light" id="benvenuto">Benvenuto</button>
+            <div id="benvDiv">
+                <div class="text-center">
+                    <img src="inc/img/logo4.png" class="logo">
+                </div>                
             </div>
-
+            
+            <div class="text-center mt-2" id="benvDivBtn">
+                <button type="button" class="btn btn-outline-light" id="benvenuto">Benvenuto</button>
+                
+            </div>
+            
         </div>
         
         <script>
