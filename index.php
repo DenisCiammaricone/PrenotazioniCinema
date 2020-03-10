@@ -213,13 +213,8 @@
             
             <div id="benvDiv">
                 <div class="text-center">
-                    <img src="inc/img/logo4.png" class="logo">
+                    <input type="image" src="inc/img/logo4.png" class="logo" id="benvenuto">
                 </div>                
-            </div>
-            
-            <div class="text-center mt-2" id="benvDivBtn">
-                <button type="button" class="btn btn-outline-light" id="benvenuto">Benvenuto</button>
-                
             </div>
             
         </div>

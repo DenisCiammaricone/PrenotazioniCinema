@@ -3,12 +3,19 @@
 	font-family: "Viner Hand ITC";
     src: url(../fonts/VINERITC.TTF);
 }
+
+@font-face
+{
+	font-family: "Segoe UI";
+    src: url(../fonts/Segoe UI.ttf);
+}
+
 .vinerhand
 {
     font-family: "Viner Hand ITC"; !important
 }
 
-@media only screen and (min-width:700px)
+@media only screen and (min-width:1400px)
 {
     #cellAside
     {
@@ -23,16 +30,7 @@
     #telHeader
     {
         margin-top:2.6em !important;
-    }
-    
-    #benvenuto
-    {
-        text-shadow: 5px 5px 10px black;
-        color: white !important;
-        width:20vw !important; 
-        font-size:34px;
-    }
-    
+    }    
 }
 
 @media only screen and (max-width:700px)
@@ -47,33 +45,32 @@
         display:none;
     } 
     
-    #benvenuto
-    {
-        text-shadow: 5px 5px 10px black;
-        color: white !important;
-        width:20vw !important; 
-        font-size:12px;
-    }
-    
     .logo
     {
-        width:10%;
+        width:12%;
     }
 }
 
-@media only screen and (max-width:1400px)
+@media only screen and (max-width:1400px) and (min-width:700px)
 {
-	.logo
+    #cellAside
     {
-        width:14%;
+        display: none;
     }
     
-    #benvenuto
+    #pcNav
     {
-        text-shadow: 5px 5px 10px black;
-        color: white !important;
-        width:20vw !important; 
-        font-size:23px;
+        display: flex;
+    }
+    
+    #telHeader
+    {
+        margin-top:2.9em !important;
+    }
+    
+	.logo
+    {
+        width:12%;
     }
 }
 
@@ -128,7 +125,6 @@ footer
     margin-top:4em;
     margin-bottom: 0;
     position: relative!important;
-
 }
 
 .dark-footer
@@ -165,7 +161,6 @@ footer
 body
 {
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 #bg-goosebumps
@@ -180,11 +175,6 @@ body
     display:none;
 }
 
-#benvenuto:hover
-{
-    background-color: #ffffff55 !important;
-}
-
 .pagina
 {
     display:none;
@@ -194,12 +184,27 @@ body
 {
     width:100%; 
     position:relative; 
-    top:16em;
+    top:18.5em;
 }
 
-#benvDivBtn
+#DivAutori
 {
-    width:100%; 
-    position:relative; 
-    top:15em;
+    position:relative;
+    margin-top: 0;
+    top:0;
+}
+
+#dropupFooter
+{
+    overflow: hidden;
+    list-style: none;
+    transform: scaleY(0);  
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+    
+    width:30vw; 
+    float:right; 
+    height:auto; 
+    margin-bottom:0; 
+    border-radius:0;
 }

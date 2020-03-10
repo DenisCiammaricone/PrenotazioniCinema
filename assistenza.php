@@ -33,6 +33,20 @@
             
         ?>
         
+        <main>
+            
+            <section>
+            
+                <article>
+                
+                    
+                
+                </article>
+                
+            </section>
+        
+        </main>
+        
         <?php 
                 
                 include("inc/php/incs/footer.php");
