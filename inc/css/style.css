@@ -119,6 +119,7 @@ aside ul
 
 footer
 {
+    padding:0px;
     bottom:0vh;
     background-color: #2f2f2f;
     width:100%;
@@ -166,8 +167,8 @@ body
 #bg-goosebumps
 {
     background-image: url("../img/cinema.jpg");
-     background-repeat: no-repeat;
-     background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 100vh;
     width:100%;
@@ -187,24 +188,29 @@ body
     top:18.5em;
 }
 
-#DivAutori
+#AutoriBtn:hover
 {
-    position:relative;
-    margin-top: 0;
-    top:0;
+    cursor: default;
 }
 
-#dropupFooter
+#AutoriDropUp
 {
-    overflow: hidden;
-    list-style: none;
-    transform: scaleY(0);  
-    transform-origin: bottom;
+    transform: scaleY(0);
     transition: transform 0.3s ease;
-    
-    width:30vw; 
-    float:right; 
-    height:auto; 
-    margin-bottom:0; 
+    transform-origin: bottom;
+    position: absolute;
+    background-color: #2f2f2f;
+    z-index: 1;
     border-radius:0;
+    width:100%;
+    text-align: left;
+    padding: 0.5%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border:0px;
+}
+
+#AutoriDropUp:hover
+{
+    cursor: default;
 }

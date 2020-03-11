@@ -1,12 +1,3 @@
-<ul class="dark-footer text-white card autori pagina" id="dropupFooter" style="">
-   <li>Ciammaricone Denis</li><br>
-   <li>Di Simone Andrea</li><br>
-   <li>Lotorio Luca</li><br>
-   <li>Stortini Corrado</li><br>
-   <li>Tupitti Leonardo</li><br>
-   <li>Vetuschi Luigi</li>
-</ul>
-
 <footer class="text-light pr-4 Opacizable pagina" style="clear:both;">
     <div class="card-deck text-center">
 
@@ -21,19 +12,27 @@
         <div class="card dark-footer" style="width:20vw;">
 
               <div class="card-body">
-                  <p class="card-text">Giusto per prova</p>
+                  <p class="card-text">Classe 5AI IIS "Alessandrini-Teramo"</p>
               </div>
 
         </div>
 
         <div class="card dark-footer" style="width:20vw;">
 
-              <div class="card-body autori" id="DivAutori">
+              <div class="card-body" id="DivAutori">
                   
                   <p class="card-text">
-                        <a href="#" class="text-white" ><u>Autori</u></a>
+                        <a href="#" class="text-white" id="AutoriBtn"><u>Autori</u></a>
                   </p>
-              
+                    
+                  <div class="text-white card" id="AutoriDropUp">
+                       <i>Ciammaricone Denis</i><br>
+                       <i>Di Simone Andrea</i><br>
+                       <i>Lotorio Luca</i><br>
+                       <i>Stortini Corrado</i><br>
+                       <i>Tupitti Leonardo</i><br>
+                       <i>Vetuschi Luigi</i>
+                  </div>
             </div>
         </div>
 

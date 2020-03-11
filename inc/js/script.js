@@ -3,7 +3,6 @@ function sos(){
         if(sessionStorage.benvenuto == 1)
         {
             $('.pagina').css('display','block');
-            $('body').css('overflow-y','visible');
         }
         
     };
@@ -35,7 +34,7 @@ $(document).ready(
         if(sessionStorage.benvenuto !=1)
         {
             $('#bg-goosebumps').css('display','inherit');
-            $('#bg-goosebumps').css('overflow-y','hidden');
+            $('#body').css('overflow-y','hidden');
         }
         
         
@@ -46,7 +45,7 @@ $(document).ready(
                 
                 $('#bg-goosebumps').css('transform','scale3d(4,4,2)'); //zoom
                 $('#bg-goosebumps').fadeTo(1300,0); //fa scomparire l'immagine entro 1,3 secondi
-                
+                $('body').css('overflow-y','hidden');
                 sessionStorage.benvenuto = 1; //salvo 1 nella session benvenuto come flag, per capire poi se ho già fatto il click su goosebumps nell'index
                 
                 window.setTimeout(entra,1300); //richiama la funzione entra dopo 1,3 secondi
@@ -56,24 +55,25 @@ $(document).ready(
         //funzione per nascondere lo sfondo iniziale e far comparire il sito vero e proprio
         function entra(){
             $('#bg-goosebumps').css('display','none');
-            
-            $('body').css('overflow-y','visible'); //faccio tornare visibile la barra di scorrimento laterale
-            
             $('.pagina').fadeTo(1000,1);
+            $('body').css('overflow-y','visible');//faccio tornare visibile la barra di scorrimento laterale
         };
         
         
-        $('.autori').hover(
+        $('#DivAutori').hover(
             function(){
-                $('#dropupFooter').css({
+                $('#AutoriDropUp').css({
+                    bottom: '100%',
                     transform: 'scaleY(1)'
                 });
+                
             
             },
             function(){
-                $('#dropupFooter').css({
+                $('#AutoriDropUp').css({
                     transform: 'scaleY(0)'
                 });
+                
             });
         
     });
