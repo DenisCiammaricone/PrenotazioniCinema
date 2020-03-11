@@ -43,11 +43,11 @@
         ?>
 
         <div class="fixed top pagina OpacizableFooter" style="width:100%; z-index:9;" >
-            <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh; ">
+            <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh;">
 
                 <ul class="navbar-nav">
 
-                    <li class="nav-item"><a href="index" class="nav-link <?php if($active == 1) echo "active"?> text-darkgray" style="margin-left:35vw;">Home</a></li>
+                    <li class="nav-item"><a href="index" class="nav-link <?php if($active == 1) echo "active"?> text-darkgray" style="margin-left:32vw;">Home</a></li>
                     <li class="nav-item"><a href="programmazione" class="nav-link <?php if($active == 2) echo "active"?> text-darkgray" style="color:#4c4c4c;">Programmazione</a></li>
                     <li class="nav-item"><a href="assistenza" class="nav-link <?php if($active == 3) echo "active"?> text-darkgray" style="color:#4c4c4c;">Assistenza</a></li>
                     <li class="nav-item"><a href="contatti" class="nav-link <?php if($active == 4) echo "active"?> text-darkgray" style="color:#4c4c4c; margin-right:25vw;">Contattaci</a></li>

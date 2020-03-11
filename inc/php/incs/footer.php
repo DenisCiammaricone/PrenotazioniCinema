@@ -19,13 +19,12 @@
 
         <div class="card dark-footer" style="width:20vw;">
 
-              <div class="card-body" id="DivAutori">
-                  
+              <div class="card-body"  id="DivAutori">
                   <p class="card-text">
                         <a href="#" class="text-white" id="AutoriBtn"><u>Autori</u></a>
                   </p>
-                    
-                  <div class="text-white card" id="AutoriDropUp">
+
+                  <div class="text-white card " id="AutoriDropUp">
                        <i>Ciammaricone Denis</i><br>
                        <i>Di Simone Andrea Luca</i><br>
                        <i>Lotorio Luca</i><br>
