@@ -27,7 +27,7 @@
                     
                   <div class="text-white card" id="AutoriDropUp">
                        <i>Ciammaricone Denis</i><br>
-                       <i>Di Simone Andrea</i><br>
+                       <i>Di Simone Andrea Luca</i><br>
                        <i>Lotorio Luca</i><br>
                        <i>Stortini Corrado</i><br>
                        <i>Tupitti Leonardo</i><br>
