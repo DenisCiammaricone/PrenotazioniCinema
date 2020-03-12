@@ -1,5 +1,5 @@
 <div class="modal" id="Login">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <form id="loginForm" method="post" action="inc/php/loginSystem/sc_login.php">
                       <!-- Modal Header -->
@@ -47,7 +47,7 @@
                     <div class="modal-footer " style="display:block;">
                         
                         <div class="row justify-content-center">
-                            <input type="button" onClick="checkLoginForm()" value="accedi" class="btn btn-outline-dark mb-2">
+                            <input type="button" onClick="checkLoginForm()" value="Accedi" class="btn btn-outline-dark mb-2">
                         </div>
                         
                         <div class="row justify-content-center">

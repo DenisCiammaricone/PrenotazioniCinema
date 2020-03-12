@@ -20,15 +20,15 @@ session_start();
         ';
     }
 
-    $q = "SELECT user_email, user_pass
+    $q = "SELECT Email, Password
             FROM users
-           WHERE '$email' = user_email";
+           WHERE '$email' = Email";
     $result = mysqli_query($conn, $q);
     mysqli_close($conn);
 
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)){
-            if(password_verify($pass,$row['user_pass'])){
+            if(password_verify($pass,$row['Password'])){
                 $_SESSION["logged"] = "true"; 
                 //Cookies last 10day 
                 if(isset($keepConn)){

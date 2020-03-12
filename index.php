@@ -4,7 +4,7 @@
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
     <head>
         <title>Cinema Goosebumps</title>
@@ -22,16 +22,18 @@
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
         <script src="inc/js/adjustFooter.js" type="text/javascript"></script>
         <link href="inc/img/logo.png" rel="icon" type="image/png">
+        
+        
     </head>
     
-    <body>
+    <body id="body">
         
         <?php
             $active = 1; //dico che mi trovo su home
             include("inc/php/incs/menu.php");
         ?>
         
-        <main class="mt-4 text-black Opacizable pagina">
+        <main class="mt-4 text-black Opacizable pagina" style="clear:both;">
             <div class="mt-4 container">
                 <section>
                     <article class="mb-4">

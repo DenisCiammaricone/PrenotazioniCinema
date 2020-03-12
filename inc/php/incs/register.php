@@ -1,11 +1,12 @@
         <!-- Modal -->
         <div class="modal" id="Register">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <form id="registerForm" method="post" action="inc/php/loginSystem/sc_register.php">
+                    
                       <!-- Modal Header -->
                       <div class="modal-header bg-secondary">
-                        <h4 class="modal-title text-white">Registrazione</h4>
+                          <h4 class="modal-title text-white">Registrazione</h4>
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
                       </div>
 
@@ -103,6 +104,10 @@
                     <!-- Modal footer -->
                 
                     <div class="modal-footer justify-content-center">
+                        
+                        <a href="#" data-toggle="modal" data-target="#Login" data-dismiss="modal" class="btn btn-outline-danger">
+                                Torna indietro
+                        </a>
                         
                         <input type="button" onClick="checkRegisterForm()" class="btn btn-outline-dark mr-4" value="Registrati">
                             

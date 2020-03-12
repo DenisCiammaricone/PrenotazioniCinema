@@ -8,15 +8,15 @@
             if(isset($_COOKIE['email']) && isset($_COOKIE['pass'])){
                 $email = $_COOKIE['email'];
                 $pass = $_COOKIE['pass'];
-                $q = "SELECT user_email, user_pass
+                $q = "SELECT Email, Password
                     FROM users
-                WHERE '$email' = user_email";
+                WHERE '$email' = Email";
                 $result = mysqli_query($conn, $q);
                 mysqli_close($conn);
                 
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_array($result)){
-                        if(password_verify($pass,$row['user_pass'])){
+                        if(password_verify($pass,$row['Password'])){
                             //header("Location:../../../index.php");
                             $_SESSION["logged"] = "true";   
                         } else{
@@ -25,7 +25,7 @@
                                     alert("Errore di LogIn Automatico!");
                                 </script>
                             ';
-                            header("Location:../../../pagina.php");
+                            header("Location:../../../index");
                             $_SESSION["logged"] = "false";
                         }
                     }
@@ -36,13 +36,13 @@
                         </script>
                     ';
                     
-                    header("Location:../../../pagina.php");
+                    header("Location:../../../index");
                     $_SESSION["logged"] = "false";
                 }
             }
         ?>
 
-        <div class="fixed top pagina OpacizableFooter" style="width:100%; z-index:9;" >
+        <div class="fixed top pagina OpacizableFooter" id="nav" style="width:100%; z-index:9;" >
             <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh;">
 
                 <ul class="navbar-nav">
@@ -76,19 +76,14 @@
         <?php include('inc/php/incs/register.php') ?>
 
         <header class="jumbotron jumbotron-fluid Opacizable pagina" id="telHeader" style="padding:1%;">
-            <div class="row text-center container-fluid">
-                <div class="col-4"></div>
-                <div class="col-1">
-                    <img src="inc/img/logo.png">
-                </div>
-                <div class="col-2">
-                    <h1 class="display-3" id="logo">Goosebumps</h1>
-                </div>
+            <div class="text-center container-fluid">
+                    <img src="inc/img/logo.png" style="display:inline;">
+                    <h1 class="display-3" id="logo" style="display:inline; vertical-align:middle">Goosebumps</h1>
             </div>
         </header>
         
         
-        <div class="fixed pagina OpacizableFooter" id="cellAside">
+        <div class="fixed pagina OpacizableFooter" id="cellAside" style="clear:both;">
             <aside class="navbar navbar-light">
 
                     <button class="navbar-toggler no-decoration" id="toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
