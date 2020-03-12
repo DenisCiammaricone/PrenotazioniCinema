@@ -30,9 +30,10 @@
         exit();
     }
 
-    $q = "SELECT user_email, user_name, user_surname
+    $q = "SELECT Email, NomeU, CognomeU
             FROM users
-           WHERE user_email = '$email' OR user_name = '$name' OR user_surname = '$surname'";
+           WHERE Email = '$email' OR NomeU = '$name' OR CognomeU = '$surname'";
+
     $result = mysqli_query($conn, $q);
 
     if (mysqli_num_rows($result) > 0) {
@@ -47,8 +48,8 @@
     }
 
     //Query to add a ner user as a record
-    $q = "INSERT INTO users (user_name,user_surname,user_email,user_pass)
-                     VALUES ('$name','$surname','$email','$pass')";
+    $q = "INSERT INTO users
+                     VALUES (NULL,'$name','$surname','$email','$pass')";
     
 
     $result = mysqli_query($conn, $q);

@@ -8,15 +8,15 @@
             if(isset($_COOKIE['email']) && isset($_COOKIE['pass'])){
                 $email = $_COOKIE['email'];
                 $pass = $_COOKIE['pass'];
-                $q = "SELECT user_email, user_pass
+                $q = "SELECT Email, Password
                     FROM users
-                WHERE '$email' = user_email";
+                WHERE '$email' = Email";
                 $result = mysqli_query($conn, $q);
                 mysqli_close($conn);
                 
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_array($result)){
-                        if(password_verify($pass,$row['user_pass'])){
+                        if(password_verify($pass,$row['Password'])){
                             //header("Location:../../../index.php");
                             $_SESSION["logged"] = "true";   
                         } else{
@@ -25,7 +25,7 @@
                                     alert("Errore di LogIn Automatico!");
                                 </script>
                             ';
-                            header("Location:../../../pagina.php");
+                            header("Location:../../../index");
                             $_SESSION["logged"] = "false";
                         }
                     }
@@ -36,7 +36,7 @@
                         </script>
                     ';
                     
-                    header("Location:../../../pagina.php");
+                    header("Location:../../../index");
                     $_SESSION["logged"] = "false";
                 }
             }
