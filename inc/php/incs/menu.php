@@ -76,19 +76,14 @@
         <?php include('inc/php/incs/register.php') ?>
 
         <header class="jumbotron jumbotron-fluid Opacizable pagina" id="telHeader" style="padding:1%;">
-            <div class="row text-center container-fluid">
-                <div class="col-4"></div>
-                <div class="col-1">
-                    <img src="inc/img/logo.png">
-                </div>
-                <div class="col-2">
-                    <h1 class="display-3" id="logo">Goosebumps</h1>
-                </div>
+            <div class="text-center container-fluid">
+                    <img src="inc/img/logo.png" style="display:inline;">
+                    <h1 class="display-3" id="logo" style="display:inline; vertical-align:middle">Goosebumps</h1>
             </div>
         </header>
         
         
-        <div class="fixed pagina OpacizableFooter" id="cellAside">
+        <div class="fixed pagina OpacizableFooter" id="cellAside" style="clear:both;">
             <aside class="navbar navbar-light">
 
                     <button class="navbar-toggler no-decoration" id="toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

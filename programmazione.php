@@ -24,7 +24,7 @@
         <link href="inc/img/logo.png" rel="icon" type="image/png">
     </head>
     
-    <body>
+    <body id="body">
         <?php
             if(isset($_SESSION['benvenuto']))
             {

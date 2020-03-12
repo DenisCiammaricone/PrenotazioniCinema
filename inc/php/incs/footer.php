@@ -1,5 +1,5 @@
-<div style="position:relative; margin-top:5em;">
-    <footer class="text-light pr-4 Opacizable pagina" style="clear:both;">
+<div class="pagina" style="position:relative; margin-top:5em;">
+    <footer class="text-light pr-4 Opacizable " style="clear:both;">
         <div class="card-deck text-center">
 
             <div class="card dark-footer" style="width:20vw;">

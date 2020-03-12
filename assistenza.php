@@ -24,7 +24,7 @@
         <link href="inc/img/logo.png" rel="icon" type="image/png">
     </head>
     
-    <body>
+    <body id="body">
         <?php
             if(isset($_SESSION['benvenuto']))
             {
@@ -33,13 +33,19 @@
             
         ?>
         
-        <main>
+        <main class="text-center">
             
             <section>
-            
+                <h1>Assistenza</h1>
+                <h3><small>Questà è l'assistenza, come possiamo aiutarti?</small></h3>
                 <article>
-                
                     
+                    <hr>
+                    <p><strong>Ho problemi con</strong></p>
+                    
+                        <input type="button" class="btn btn-dark"  value="Account">
+                        <input type="button" class="btn btn-dark"  value="Pagamenti">
+                        <input type="button" class="btn btn-dark"  value="Tecnico">
                 
                 </article>
                 

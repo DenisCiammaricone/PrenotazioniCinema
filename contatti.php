@@ -25,7 +25,7 @@
         
     </head>
     
-    <body>
+    <body id="body">
         <?php
             if(isset($_SESSION['benvenuto']))
             {
