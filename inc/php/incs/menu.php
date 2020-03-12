@@ -25,7 +25,7 @@
                                     alert("Errore di LogIn Automatico!");
                                 </script>
                             ';
-                            header("Location:../../../index");
+                            header("Location:index");
                             $_SESSION["logged"] = "false";
                         }
                     }
@@ -36,7 +36,7 @@
                         </script>
                     ';
                     
-                    header("Location:../../../index");
+                    header("Location:index");
                     $_SESSION["logged"] = "false";
                 }
             }
