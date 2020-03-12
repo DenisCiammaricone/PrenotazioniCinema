@@ -218,3 +218,36 @@ body
 {
     height:2.5vh;
 }
+
+.problemi
+{
+    display:block;
+    overflow-y: hidden !important;
+    transition: height 0s ease;
+    font-size:1.3rem;
+}
+
+.problemi a:hover
+{
+    text-decoration: none;
+    opacity: 1 !important;
+    color: lightblue;
+}
+
+.problemi a
+{
+    color: #00aeff;
+}
+
+#accordion
+{
+    position: relative;
+    width:50vw;
+    margin-top:2vh;
+    left:25%;
+}
+
+#Altro
+{
+    text-align: center;
+}

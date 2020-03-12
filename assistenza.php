@@ -36,19 +36,61 @@
         <main class="text-center">
             
             <section>
+                
                 <h1>Assistenza</h1>
-                <h3><small>Questà è l'assistenza, come possiamo aiutarti?</small></h3>
+                <h3><small>Questa è l'assistenza, come possiamo aiutarti?</small></h3>
+                
                 <article>
                     
                     <hr>
                     <p><strong>Ho problemi con</strong></p>
                     
-                        <input type="button" class="btn btn-dark"  value="Account">
-                        <input type="button" class="btn btn-dark"  value="Pagamenti">
-                        <input type="button" class="btn btn-dark"  value="Tecnico">
+                        <input type="button" data-toggle="collapse" data-target="#Account" class="btn btn-dark" value="Account">
+                        <input type="button" data-toggle="collapse" data-target="#Pagamenti" class="btn btn-dark" value="Pagamenti">
+                        <input type="button" data-toggle="collapse" data-target="#Altro" class="btn btn-dark" value="Altro">
                 
                 </article>
                 
+                <article id="accordion">
+                    
+                    <!--Problemi con l'account-->
+                    <div class="collapse problemi bg-dark text-light shadow-lg p-4 text-left" id="Account" data-parent="#accordion">
+
+                        <p style="width:50%; float:left">
+                            <a href="#" class="hover" style="margin-left:15%;">Mi hanno rubato l'account</a><br>
+                            <a href="#" class="hover" style="margin-left:15%;">Cambiare l'email</a>
+                        </p>
+                        
+                        <p style="width:50%; float:left">
+                            <a href="#" class="hover" style="margin-left:15%;">Cambiare la password</a><br>
+                            <a href="#" class="hover" style="margin-left:15%;">Problemi con il login</a>
+                        </p>
+                        
+                    </div>
+
+                    <!--Problemi con i pagamenti-->
+                    <div class="collapse problemi bg-dark text-light shadow-lg p-4 text-left" id="Pagamenti" data-parent="#accordion">
+
+                        <p style="width:50%; float:left">
+                            <a href="#" class="hover" style="margin-left:15%;">Rimborso del biglietto</a><br>
+                            <a href="#" class="hover" style="margin-left:15%;">Acquisto non andato a buon fine</a>
+                        </p>
+                        
+                        <p style="width:50%; float:left">
+                            <a href="#" class="hover" style="margin-left:15%;">Metodi di pagamento accettati</a><br>
+                            <a href="#" class="hover" style="margin-left:15%;">Problemi con il pagamento</a>
+                        </p>
+
+                    </div>
+
+                    <!--Problemi tecnici-->
+                    <div class="collapse problemi bg-dark text-light shadow-lg p-4" id="Altro" data-parent="#accordion">
+
+                       <a href="#" class="hover">Clicca qui per inviarci un'email dettagliata</a>
+
+                    </div>
+                    
+                </article>
             </section>
         
         </main>
