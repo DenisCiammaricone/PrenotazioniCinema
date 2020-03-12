@@ -39,8 +39,6 @@
             
                 <article>
                 
-                    
-                
                 </article>
                 
             </section>
