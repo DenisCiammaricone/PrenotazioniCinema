@@ -34,7 +34,7 @@ $(document).ready(
         if(sessionStorage.benvenuto !=1)
         {
             $('#bg-goosebumps').css('display','inherit');
-            $('#body').css('overflow-y','hidden');
+            $('body').css('overflow-y','hidden');
         }
         
         

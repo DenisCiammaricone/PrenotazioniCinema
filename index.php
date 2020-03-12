@@ -4,7 +4,7 @@
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
     <head>
         <title>Cinema Goosebumps</title>
@@ -22,6 +22,8 @@
         <script src="inc/js/formVerification.js" type="text/javascript"></script>
         <script src="inc/js/adjustFooter.js" type="text/javascript"></script>
         <link href="inc/img/logo.png" rel="icon" type="image/png">
+        
+        
     </head>
     
     <body>

@@ -42,7 +42,7 @@
             }
         ?>
 
-        <div class="fixed top pagina OpacizableFooter" style="width:100%; z-index:9;" >
+        <div class="fixed top pagina OpacizableFooter" id="nav" style="width:100%; z-index:9;" >
             <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh;">
 
                 <ul class="navbar-nav">

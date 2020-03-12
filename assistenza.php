@@ -4,7 +4,7 @@
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
     <head>
         <title>Assistenza cinema Goosebumps</title>
