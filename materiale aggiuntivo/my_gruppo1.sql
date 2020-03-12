@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `CognomeU` varchar(30) NOT NULL,
   `Email` varchar(30) NOT NULL,
   `Password` varchar(256) NOT NULL,
+  `Priviledge` varchar(15),
   PRIMARY KEY (`PK_CodU`)
 ) ENGINE=InnoDB;
 
