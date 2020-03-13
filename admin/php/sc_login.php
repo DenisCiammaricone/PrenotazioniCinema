@@ -20,10 +20,10 @@
         ';
     }
 
-    $q = "SELECT user_email, user_pass
+    $q = "SELECT Email, Password
             FROM users
-           WHERE '$email' = user_email
-             AND priviledge = 'ADMIN'";
+           WHERE '$email' = Email
+             AND Priviledge = 'ADMIN'";
     $result = mysqli_query($conn, $q);
     mysqli_close($conn);
 
