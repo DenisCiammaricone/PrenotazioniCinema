@@ -11,6 +11,8 @@
         
         <meta charset="utf-8">
         
+        
+
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="inc/js/popper.min.js" type="text/javascript"></script>
         
@@ -34,13 +36,28 @@
             
         ?>
         
-        <main>
+        <main class="text-center Opacizable">
             
-            <section>
-            
-                <article>
+            <section class="sectionCenter">
                 
-                    
+                <h1>Contattaci</h1>
+                <h3><small>Se hai bisogno di contattarci, compila questo form</small></h3>
+                <article class="mt-4">
+                
+                    <form class="ContattiForm">
+                        
+                        <input type="text" class="contattiInput" placeholder="Nome">
+                        
+                        <input type="text" class="contattiInput" placeholder="Email">
+                        
+                        <input type="text" class="contattiInput" placeholder="Oggetto">
+                        
+                        <textarea class="contattiInput" id="TestoEmail" placeholder="Messaggio"></textarea>
+                        
+                        <input type="button" class="btn btn-outline-dark" id="InviaEmail" value="Invia">
+                        <input type="reset" class="btn btn-outline-dark" value="Sbianca">
+                        
+                    </form>
                 
                 </article>
                 

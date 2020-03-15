@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Password` varchar(256) NOT NULL,
   `Priviledge` varchar(15),
   PRIMARY KEY (`PK_CodU`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB; 
 
 -- --------------------------------------------------------
 

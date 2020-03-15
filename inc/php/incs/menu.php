@@ -41,7 +41,6 @@
                 }
             }
         ?>
-
         <div class="fixed top pagina OpacizableFooter" id="nav" style="width:100%; z-index:9;" >
             <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh;">
 
@@ -56,13 +55,13 @@
                         <?php 
                             if(isset($_SESSION['logged'])){
                                 if($_SESSION['logged'] == "true"){ 
-                                    echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw;" class="btn btn-outline-dark">Logout</a>');
+                                    echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark">Logout</a>');
                                 }
                                 else{ 
-                                    echo('<button id="loginButton" type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
+                                    echo('<button id="loginButton" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
                                 }
                             } else {
-                                echo('<button id="loginButton" type="button" style="width:8vw;" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
+                                echo('<button id="loginButton" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
                             }
                                 
                         ?>
@@ -71,13 +70,12 @@
 
             </nav>
         </div>
-        
         <?php include('inc/php/incs/login.php') ?>
         <?php include('inc/php/incs/register.php') ?>
 
         <header class="jumbotron jumbotron-fluid Opacizable pagina" id="telHeader" style="padding:1%;">
             <div class="text-center container-fluid">
-                    <img src="inc/img/logo.png" style="display:inline;">
+                    <img src="inc/img/logo.png" style="display:inline; width:5vw">
                     <h1 class="display-3" id="logo" style="display:inline; vertical-align:middle">Goosebumps</h1>
             </div>
         </header>
