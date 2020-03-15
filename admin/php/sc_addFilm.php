@@ -18,9 +18,8 @@
         echo "Errore Caricamento locandina";
     }
 
-    echo $genere;
     //PRendi i codici del Genere e del Nome e Cognome del Regista
-    $q = "SELECT PK_CodG FROM GeneriFilm WHERE Nome = '$genere'";
+    $q = "SELECT PK_CodG FROM generifilm WHERE Nome = '$genere'";
     $result = mysqli_query($conn, $q);
 
     $codiceGenere = -1;
@@ -31,24 +30,26 @@
         }
         if($codiceGenere > 0){
             
-            $q = "SELECT PK_CodR FROM RegistiFilm WHERE NomeRF = '$nomeReg' AND CognomeRF = '$cognReg'";
+            $q = "SELECT PK_CodR FROM registifilm WHERE NomeRF = '$nomeReg' AND CognomeRF = '$cognReg'";
             $result = mysqli_query($conn, $q);
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_array($result)){
                     $codiceRegista = $row['PK_CodR'];
                 }
                 if($codiceRegista > 0){
+                    $conn->query("SET NAMES utf8");
                     //Query per caricamento in Elenco Film
-                    $q = "INSERT INTO Elenco_Film VALUES (NULL, '$titolo','$descr','$nomeLocandina', $durata, $codiceGenere, $codiceRegista)";
+                    $q = "INSERT INTO elenco_film VALUES (NULL, '$titolo',".$descr.",'$locandina', $durata, $codiceGenere, $codiceRegista)";
                     $result = mysqli_query($conn, $q);
                 }
                 echo $codiceRegista;
             }
             else{
-                $q = "INSERT INTO RegistiFilm VALUES (NULL,'$nomeReg','$cognReg')";
+                $conn->query("SET NAMES utf8");
+                $q = "INSERT INTO registifilm VALUES (NULL,'$nomeReg','$cognReg')";
                 $result = mysqli_query($conn, $q);
 
-                $q = "SELECT PK_CodR FROM RegistiFilm WHERE NomeRF = '$nomeReg' AND CognomeRF = '$cognReg'";
+                $q = "SELECT PK_CodR FROM registifilm WHERE NomeRF = '$nomeReg' AND CognomeRF = '$cognReg'";
                 $result = mysqli_query($conn, $q);
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_array($result)){
@@ -56,7 +57,7 @@
                     }
                     if($codiceRegista >= 0){
                         //Query per caricamento in Elenco Film
-                        $q = "INSERT INTO Elenco_Film VALUES (NULL, '$titolo','$descr','$nomeLocandina', $durata, $codiceGenere, $codiceRegista)";
+                        $q = "INSERT INTO elenco_film VALUES (NULL, '$titolo',".$descr.",'$locandina', $durata, $codiceGenere, $codiceRegista)";
                         $result = mysqli_query($conn, $q);
                     }
                 }

@@ -42,7 +42,7 @@
                     } catch(Exception $e){
                         console.log('Problema di connessione: ("'.$e.'")');
                     }
-                    $q = "SELECT Nome FROM GeneriFilm";
+                    $q = "SELECT Nome FROM generifilm";
                     $result = mysqli_query($conn, $q);
                     mysqli_close($conn);
 
