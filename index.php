@@ -40,79 +40,40 @@
                         <h3 class="text-center"><i>In programmazione oggi</i></h3>
                         
                         <hr>
-                        
                         <div class="card-deck" style="color:black;">
-
-                            <!-- Primo spettacolo -->
+                        <?php
+                        
+                            $q = "select * from elenco_film";
+                        
+                            $res = mysqli_query($conn,$q);
+                            while($row = mysqli_fetch_assoc($res))
+                            {
+                                $titolo = $row['Titolo'];
+                                $locandina = $row['Locandina'];
+                                
+                                ?>
+                        
                             <div class="card" style="width:10vw;">
 
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                              <img class="card-img-top" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
                               <div class="card-body">
-                                  <h4 class="card-title"></h4>
+                                  <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
                                   <p class="card-text"></p>
                                   <a href="#" class="stretched-link"></a>
                               </div>
 
                             </div>
+                        
+                        <?php
+                            }
+                        
+                        ?>
+                        
 
-                            <!-- Secondo spettacolo -->
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
-                            <!-- Terzo spettacolo -->
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
-                            <!-- Quarto spettacolo -->
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
-                            <!-- Quinto spettacolo -->
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title">Prova</h4>
-                                  <p class="card-text">Giusto per prova</p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
+                            
                         </div>
+                        
                     </article>
 
                     <article class="mb-4">

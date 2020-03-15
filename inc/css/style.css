@@ -320,3 +320,8 @@ button
     border-color: lightgray;
     box-shadow: 0px -6px 5px -5px #87BFFC inset;
 }
+
+.card-img-top
+{
+    height: 268px !important;
+}
