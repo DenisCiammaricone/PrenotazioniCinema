@@ -5,18 +5,18 @@
 
         if(isset($_SESSION['AdminEmail']) && isset($_SESSION['AdminPass'])){
             $adminEmail = $_SESSION['AdminEmail'];
-            $q = "SELECT user_email, user_pass
+            $q = "SELECT Email, Password
             FROM users
-           WHERE '$adminEmail' = user_email
-             AND priviledge = 'ADMIN'";
-            
+           WHERE '$adminEmail' = Email
+             AND Priviledge = 'ADMIN'";
+            $result = mysqli_query($conn, $q);
+            mysqli_close($conn);
         }
-        $result = mysqli_query($conn, $q);
-        mysqli_close($conn);
+        
 
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_array($result)){
-                if(password_verify($_SESSION['AdminPass'],$row['user_pass'])){
+                if(password_verify($_SESSION['AdminPass'],$row['Password'])){
                     return true;
                 }
                 else

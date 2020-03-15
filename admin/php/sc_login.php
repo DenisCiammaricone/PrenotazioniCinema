@@ -29,7 +29,7 @@
 
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)){
-            if(password_verify($pass,$row['user_pass'])){
+            if(password_verify($pass,$row['Password'])){
                 $_SESSION['AdminEmail'] = $email;
                 $_SESSION['AdminPass'] = $pass;
                 header("Location:../main.php");
@@ -54,13 +54,13 @@
 
         if(isset($_SESSION['AdminEmail']) && isset($_SESSION['AdminPass'])){
             $adminEmail = $_SESSION['AdminEmail'];
-            $q = "SELECT user_email, user_pass
+            $q = "SELECT Email, Password
             FROM users
-           WHERE '$adminEmail' = user_email
+           WHERE '$adminEmail' = Email
              AND priviledge = 'ADMIN'";
             
+            $result = mysqli_query($conn, $q);
         }
-        $result = mysqli_query($conn, $q);
         mysqli_close($conn);
 
         if (mysqli_num_rows($result) > 0) {
