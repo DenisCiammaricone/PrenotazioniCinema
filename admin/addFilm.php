@@ -32,7 +32,31 @@
             <label for="genere">Genere: </label>
             <select id="genere" name="genere">
                 <?php
-                    include("php/sc_caricaGeneri.php");
+                    $ip = "localhost";
+                    $user = "root";
+                    $pass = "";
+                    $db = "my_gruppo1";
+                    
+                    try {
+                        $conn = mysqli_connect($ip,$user,$pass,$db);
+                    } catch(Exception $e){
+                        console.log('Problema di connessione: ("'.$e.'")');
+                    }
+                    $q = "SELECT Nome FROM GeneriFilm";
+                    $result = mysqli_query($conn, $q);
+                    mysqli_close($conn);
+
+                    if (mysqli_num_rows($result) > 0) {
+                        while($row = mysqli_fetch_array($result)) {
+                            echo ('
+                                <option value="'.$row['Nome'].'">'.$row['Nome'].'</option>
+                            ');
+                        }
+                    } else {
+                        echo ('
+                            <option>Nessun elemento trovato</option>
+                        ');
+                    }
                 ?>
             </select><br><br>
             <label for="nomeRegista">Nome Regista: </label>

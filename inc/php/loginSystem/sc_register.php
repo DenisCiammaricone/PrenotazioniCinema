@@ -49,7 +49,7 @@
 
     //Query to add a ner user as a record
     $q = "INSERT INTO users
-                     VALUES (NULL,'$name','$surname','$email','$pass')";
+                     VALUES (NULL,'$name','$surname','$email','$pass',NULL)";
     
 
     $result = mysqli_query($conn, $q);
