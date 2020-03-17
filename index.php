@@ -82,74 +82,68 @@
 
                         <div class="card-deck" style="color:black;">
 
-                            <!-- Primo spettacolo -->
+                            <?php
+                        
+                            $q = "select Orario, PK_Cods, titolo,locandina 
+                                  from elenco_film,spettacoli
+                                  where elenco_film.PK_CodF = spettacoli.FK_CodF and 
+                                  Orario > curtime()
+                                  order by Orario,PK_CodS LIMIT 5";
+                        
+                            $res = mysqli_query($conn,$q);
+                            $nSpettacoli = 0;
+                            
+                            while($row = mysqli_fetch_assoc($res))
+                            {
+                                $titolo = $row['titolo'];
+                                $locandina = $row['locandina'];
+                                $nSpettacoli ++;
+                                ?>
+                        
                             <div class="card" style="width:10vw;">
 
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                              <img class="card-img-top" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
                               <div class="card-body">
-                                  <h4 class="card-title"></h4>
+                                  <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
                                   <p class="card-text"></p>
                                   <a href="#" class="stretched-link"></a>
                               </div>
 
                             </div>
+                        
+                        <?php
+                            }
+                        	if($nSpettacoli < 5)
+                            {
+                            	$n = 5 - $nSpettacoli;
+                            	$q = 'select Orario, PK_Cods, titolo,locandina 
+                                  from elenco_film,spettacoli
+                                  where elenco_film.PK_CodF = spettacoli.FK_CodF 
+                                  order by Orario,PK_CodS LIMIT '.$n.'';
+                                  $res = mysqli_query($conn,$q);
+                                  while($row = mysqli_fetch_assoc($res))
+                                  {
+                                      $titolo = $row['titolo'];
+                                      $locandina = $row['locandina'];
+                                      ?>
 
-                            <!-- Secondo spettacolo -->
+                                  <div class="card" style="width:10vw;">
 
-                            <div class="card" style="width:10vw;">
+                                    <img class="card-img-top" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                                    <div class="card-body">
+                                        <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
+                                        <p class="card-text"></p>
+                                        <a href="#" class="stretched-link"></a>
+                                    </div>
 
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
+                                  </div>
 
-                            </div>
-
-                            <!-- Terzo spettacolo -->
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
-                            <!-- Quarto spettacolo -->
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title"></h4>
-                                  <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
-
-                            <!-- Quinto spettacolo -->
-
-                            <div class="card" style="width:10vw;">
-
-                              <img class="card-img-top" src="img_avatar1.png" alt="Card image">
-
-                              <div class="card-body">
-                                  <h4 class="card-title">Prova</h4>
-                                  <p class="card-text">Giusto per prova</p>
-                                  <a href="#" class="stretched-link"></a>
-                              </div>
-
-                            </div>
+                              <?php
+                                  }
+                            }
+                        ?>
 
                         </div>
                     </article>
@@ -190,4 +184,4 @@
         </script>
         
     </body>
-</html>
+</html>

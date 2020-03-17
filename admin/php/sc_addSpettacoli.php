@@ -5,41 +5,21 @@ header('Content-type: text/html; charset=UTF-8');
     $sala = $_POST['sala'];
     $orario = $_POST['orario'];
     $costo = $_POST['costo'];
-   
-   
-    //PRendi i codici del Genere e del Nome e Cognome del Regista
-    $q = "SELECT PK_Codf FROM elenco_film WHERE Titolo = '$Titolo'";
-    $result = mysqli_query($conn, $q);
+    $codiceFilm = $_POST['film'];
 
-    $codiceFilm = -1;
-  
-    if (mysqli_num_rows($result) > 0) {
-        while($row = mysqli_fetch_array($result)){
-            $codiceFilm = $row['PK_CodF'];
-        }
-        if($codiceFilm > 0){
-            
-            $q = "SELECT PK_CodF FROM elenco_film WHERE  1";
-            $result = mysqli_query($conn, $q);
-            if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_array($result)){
-                    $codiceFilm = $row['PK_CodF'];
-                }
-                if($codicefilm > 0){
-                	$conn->query("SET NAMES utf8");
-                    //Query per caricamento in Elenco Film
-                    $q = "INSERT INTO spettacoli VALUES (NULL, '$sala','$orario','$costo', $codicefilm)";
-                    $result = mysqli_query($conn, $q);
-                }
-              
-            }
-            
-        } else {
-            echo('
-                <script>alert("Nessun film con questo nome è stato trovato");</script>
-            ');
-        }
-    } 
+    echo $sala;
+    echo "<br>";
+    echo $orario;
+    echo "<br>";
+    echo $costo;
+    echo "<br>";
+    echo $codiceFilm;
+    echo "<br>";
+
+    //Query per caricamento in Elenco Film
+    $q = "INSERT INTO spettacoli VALUES (NULL, '$sala','$orario',$costo, $codiceFilm)";
+    mysqli_query($conn, $q);
+                
     mysqli_close($conn);
     
 ?>

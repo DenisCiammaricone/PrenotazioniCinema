@@ -26,7 +26,7 @@
             <label for="orario">Orario: </label>
             <input type="time" id="orario" name="orario"><br><br>
             <label for="costo">Costo: </label>
-            <input type="number"  id="costo" name="costo"><br><br>
+            <input type="text"  id="costo" name="costo"><br><br>
             <label for="film">Film: </label>
             <select id="film" name="film">
                 <?php
@@ -40,14 +40,14 @@
                     } catch(Exception $e){
                         console.log('Problema di connessione: ("'.$e.'")');
                     }
-                    $q = "SELECT Titolo FROM elenco_film";
+                    $q = "SELECT PK_CodF, Titolo FROM elenco_film";
                     $result = mysqli_query($conn, $q);
                     mysqli_close($conn);
 
                     if (mysqli_num_rows($result) > 0) {
                         while($row = mysqli_fetch_array($result)) {
                             echo ('
-                                <option value="'.$row['Titolo'].'">'.$row['Titolo'].'</option>
+                                <option value="'.$row['PK_CodF'].'">'.$row['Titolo'].'</option>
                             ');
                         }
                     } else {
