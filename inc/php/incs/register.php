@@ -1,6 +1,6 @@
         <!-- Modal -->
         <div class="modal" id="Register">
-          <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-dialog">
             <div class="modal-content">
                 <form id="registerForm" method="post" action="inc/php/loginSystem/sc_register.php">
                     

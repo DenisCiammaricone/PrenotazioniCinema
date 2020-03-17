@@ -1,5 +1,5 @@
 <div class="modal" id="Login">
-          <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-dialog">
             <div class="modal-content">
                 <form id="loginForm" method="post" action="inc/php/loginSystem/sc_login.php">
                       <!-- Modal Header -->
