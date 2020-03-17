@@ -43,7 +43,7 @@
                         <div class="card-deck" style="color:black;">
                         <?php
                         
-                            $q = "select * from elenco_film";
+                            $q = "select * from elenco_film order by PK_CodF LIMIT 5";
                         
                             $res = mysqli_query($conn,$q);
                             while($row = mysqli_fetch_assoc($res))
@@ -84,7 +84,7 @@
 
                             <?php
                         
-                            $q = "select Orario, PK_Cods, titolo,locandina 
+                            $q = "select TIME_FORMAT(Orario,'%H:%i') as Orario, PK_Cods, titolo,locandina 
                                   from elenco_film,spettacoli
                                   where elenco_film.PK_CodF = spettacoli.FK_CodF and 
                                   Orario > curtime()
@@ -97,16 +97,21 @@
                             {
                                 $titolo = $row['titolo'];
                                 $locandina = $row['locandina'];
+                                $orario = $row['Orario'];
                                 $nSpettacoli ++;
                                 ?>
-                        
+                            
                             <div class="card" style="width:10vw;">
-
+                                
                               <img class="card-img-top" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
                               <div class="card-body">
                                   <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
-                                  <p class="card-text"></p>
+                                  <p class="card-text text-center">
+                                            <?php 
+                                                echo $orario.' Oggi';
+                                            ?>
+                                        </p>
                                   <a href="#" class="stretched-link"></a>
                               </div>
 
@@ -116,8 +121,9 @@
                             }
                         	if($nSpettacoli < 5)
                             {
+                                
                             	$n = 5 - $nSpettacoli;
-                            	$q = 'select Orario, PK_Cods, titolo,locandina 
+                            	$q = 'select TIME_FORMAT(Orario,"%H:%i") as Orario, PK_Cods, titolo,locandina 
                                   from elenco_film,spettacoli
                                   where elenco_film.PK_CodF = spettacoli.FK_CodF 
                                   order by Orario,PK_CodS LIMIT '.$n.'';
@@ -126,23 +132,31 @@
                                   {
                                       $titolo = $row['titolo'];
                                       $locandina = $row['locandina'];
-                                      ?>
+                                      $orario = $row['Orario'];
+                                      
+                                ?>
 
                                   <div class="card" style="width:10vw;">
-
+                                    
                                     <img class="card-img-top" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
-                                        <p class="card-text"></p>
+                                        <p class="card-text text-center">
+                                            <?php 
+                                                echo $orario.' Domani';
+                                            ?>
+                                        </p>
                                         <a href="#" class="stretched-link"></a>
                                     </div>
 
                                   </div>
 
                               <?php
+                                      
                                   }
                             }
+                            
                         ?>
 
                         </div>
@@ -184,4 +198,4 @@
         </script>
         
     </body>
-</html>
+</html>
