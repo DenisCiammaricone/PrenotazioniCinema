@@ -1,4 +1,4 @@
-<div class="pagina" style="position:relative; margin-top:5em;">
+<div class="pagina" style="position:relative; margin-top:6em;">
     <footer class="text-light pr-4 Opacizable " style="clear:both;">
         
         <div class="card-deck text-center">

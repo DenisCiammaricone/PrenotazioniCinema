@@ -102,15 +102,15 @@
                                 ?>
                             
                             <div class="card" style="width:10vw;">
-                                
-                              <img class="card-img-top" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
+                                <?php 
+                                    echo '<span class="text-center">'.$orario.' Oggi</span>';
+                                ?>
+                              <img class="card-img-top img-spettacoli" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
                               <div class="card-body">
                                   <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
                                   <p class="card-text text-center">
-                                            <?php 
-                                                echo $orario.' Oggi';
-                                            ?>
+                                            
                                         </p>
                                   <a href="#" class="stretched-link"></a>
                               </div>
@@ -137,15 +137,15 @@
                                 ?>
 
                                   <div class="card" style="width:10vw;">
-                                    
-                                    <img class="card-img-top" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
+                                    <?php 
+                                        echo '<span class="text-left"'.$orario.' Domani</span>';
+                                    ?>
+                                    <img class="card-img-top img-spettacoli" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
                                     <div class="card-body">
                                         <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
                                         <p class="card-text text-center">
-                                            <?php 
-                                                echo $orario.' Domani';
-                                            ?>
+                                            
                                         </p>
                                         <a href="#" class="stretched-link"></a>
                                     </div>

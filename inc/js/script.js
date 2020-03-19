@@ -76,6 +76,17 @@ $(document).ready(
                 
             });
         
+        
+        
+        $('#account-dropdown').css({
+            height: $('#pcNav').height()
+        });
+        
+        $('#account-image').css({
+            height: $('#pcNav').height(),
+            width: $('#pcNav').height()
+        });
+        
     });
 
 

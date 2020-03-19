@@ -42,7 +42,7 @@
             }
         ?>
         <div class="fixed top pagina OpacizableFooter" id="nav" style="width:100%; z-index:9;" >
-            <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="padding-top:0.3vh; padding-bottom:0.5vh;">
+            <nav class="navbar navbar-expand justify-content-center bg-light" id="pcNav" style="position:relative;padding-top:0.3vh; padding-bottom:0.5vh;">
 
                 <ul class="navbar-nav">
 
@@ -55,13 +55,33 @@
                         <?php 
                             if(isset($_SESSION['logged'])){
                                 if($_SESSION['logged'] == "true"){ 
-                                    echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark">Logout</a>');
+                                    
+                                    //qui bisogna inserire l'immagine per la gestione dell'account
+                                    
+                                ?>
+                                    <div class="dropdown" id="account-dropdown" style="position:absolute; right:0; width:2.5vw;">
+                                        <a href="#" data-toggle="dropdown"><img src="inc/img/account.png" id="account-image" alt="account"></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">Account</a>
+                                            <a class="dropdown-item" href="#">Acquisti</a>
+                                            <a class="dropdown-item" id="logoutButton" href="logout.php">Logout</a>
+                                        </div>
+                                    </div>
+                                <?php
+                                    
+                                    /*echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark">Logout</a>');*/
                                 }
                                 else{ 
-                                    echo('<button id="loginButton" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
+                                    echo('<div id="account-dropdown" style="position:absolute; right:0; width:2.5vw;">
+                                            <a href="#" id="loginButton" data-toggle="modal" data-target="#Login"><img src="inc/img/account.png" id="account-image" alt="account"></a>
+                                        
+                                        </div>');
                                 }
                             } else {
-                                echo('<button id="loginButton" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark" data-toggle="modal" data-target="#Login">Login</button>');
+                                echo('<div id="account-dropdown" style="position:absolute; right:0; width:2.5vw;">
+                                            <a href="#" id="loginButton" data-toggle="modal" data-target="#Login"><img src="inc/img/account.png" id="account-image" alt="account"></a>
+                                        
+                                        </div>');
                             }
                                 
                         ?>

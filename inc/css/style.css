@@ -326,3 +326,8 @@ button
     height: 268px !important;
     
 }
+
+.img-spettacoli
+{
+    border-radius: 0;
+}
