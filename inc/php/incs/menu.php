@@ -59,7 +59,7 @@
                                 if($_SESSION['logged'] == "true"){ 
                                     
                                     $nome = $_SESSION['nome'];
-                                    echo '<div class="dropdown" id="account-dropdown" style="position:absolute; right:1px; width:2.5vw;">';
+                                    echo '<div class="dropdown" id="account-dropdown" style="position:absolute; right:1%; width:2.5vw;">';
                                         echo "<span id='account-name' data-toggle='dropdown' style='position:absolute; margin-top:15%;'>".ucfirst($nome)."</span>";                                    
                                 ?>
                         
@@ -78,14 +78,14 @@
                                     /*echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark">Logout</a>');*/
                                 }
                                 else{ 
-                                    echo('<div id="account-dropdown" style="position:absolute; right:1px; width:2.5vw;">
-                                            <a href="#" id="loginButton" data-toggle="modal" data-target="#Login"><img src="inc/img/account.png" id="account-image" alt="account"></a>
+                                    echo('<div id="account-dropdown" style="position:absolute; right:1.2%; width:2.5vw;">
+                                            <a href="#" class="btn btn-outline-dark" id="loginButton" data-toggle="modal" data-target="#Login">Login</a>
                                         
                                         </div>');
                                 }
                             } else {
-                                echo('<div id="account-dropdown" style="position:absolute; right:1px; width:2.5vw;">
-                                            <a href="#" id="loginButton" data-toggle="modal" data-target="#Login"><img src="inc/img/account.png" id="account-image" alt="account"></a>
+                                echo('<div id="account-dropdown" style="position:absolute; right:1.2%; ">
+                                            <a href="#" class="btn btn-outline-dark" id="loginButton" data-toggle="modal" data-target="#Login" style="width:8vw;">Login</a>
                                         
                                         </div>');
                             }
