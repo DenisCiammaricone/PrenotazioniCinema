@@ -331,3 +331,8 @@ button
 {
     border-radius: 0;
 }
+
+#account-name:hover
+{
+    cursor: pointer;
+}

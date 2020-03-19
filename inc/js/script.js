@@ -82,6 +82,11 @@ $(document).ready(
             height: $('#pcNav').height()
         });
         
+        $('#account-name').css({
+            right: 5 + $('#account-dropdown').width(),
+            height: $('#pcNav').height()
+        });
+        
         $('#account-image').css({
             height: $('#pcNav').height(),
             width: $('#pcNav').height()

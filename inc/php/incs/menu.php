@@ -8,7 +8,7 @@
             if(isset($_COOKIE['email']) && isset($_COOKIE['pass'])){
                 $email = $_COOKIE['email'];
                 $pass = $_COOKIE['pass'];
-                $q = "SELECT Email, Password
+                $q = "SELECT nomeU, Email, Password
                     FROM users
                 WHERE '$email' = Email";
                 $result = mysqli_query($conn, $q);
@@ -18,7 +18,9 @@
                     while($row = mysqli_fetch_array($result)){
                         if(password_verify($pass,$row['Password'])){
                             //header("Location:../../../index.php");
-                            $_SESSION["logged"] = "true";   
+                            $_SESSION["logged"] = "true";
+                            $nome = $row['nomeu'];
+                            $_SESSION['nome'] = $nome;
                         } else{
                             echo '
                                 <script type="text/javascript">
@@ -56,29 +58,33 @@
                             if(isset($_SESSION['logged'])){
                                 if($_SESSION['logged'] == "true"){ 
                                     
-                                    //qui bisogna inserire l'immagine per la gestione dell'account
-                                    
+                                    $nome = $_SESSION['nome'];
+                                    echo '<div class="dropdown" id="account-dropdown" style="position:absolute; right:1px; width:2.5vw;">';
+                                        echo "<span id='account-name' data-toggle='dropdown' style='position:absolute; margin-top:15%;'>".ucfirst($nome)."</span>";                                    
                                 ?>
-                                    <div class="dropdown" id="account-dropdown" style="position:absolute; right:0; width:2.5vw;">
-                                        <a href="#" data-toggle="dropdown"><img src="inc/img/account.png" id="account-image" alt="account"></a>
+                        
+                                    
+                                        <a href="#" data-toggle="dropdown"><img src="inc/img/account.png" id="account-image" alt="account" style="display:inline"></a>
                                         <div class="dropdown-menu dropdown-menu-right">
                                             <a class="dropdown-item" href="#">Account</a>
                                             <a class="dropdown-item" href="#">Acquisti</a>
                                             <a class="dropdown-item" id="logoutButton" href="logout.php">Logout</a>
                                         </div>
-                                    </div>
-                                <?php
+                                        
                                     
+                                    
+                                <?php
+                                    echo "</div>";
                                     /*echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark">Logout</a>');*/
                                 }
                                 else{ 
-                                    echo('<div id="account-dropdown" style="position:absolute; right:0; width:2.5vw;">
+                                    echo('<div id="account-dropdown" style="position:absolute; right:1px; width:2.5vw;">
                                             <a href="#" id="loginButton" data-toggle="modal" data-target="#Login"><img src="inc/img/account.png" id="account-image" alt="account"></a>
                                         
                                         </div>');
                                 }
                             } else {
-                                echo('<div id="account-dropdown" style="position:absolute; right:0; width:2.5vw;">
+                                echo('<div id="account-dropdown" style="position:absolute; right:1px; width:2.5vw;">
                                             <a href="#" id="loginButton" data-toggle="modal" data-target="#Login"><img src="inc/img/account.png" id="account-image" alt="account"></a>
                                         
                                         </div>');

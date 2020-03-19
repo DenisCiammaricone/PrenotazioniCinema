@@ -20,7 +20,7 @@ session_start();
         ';
     }
 
-    $q = "SELECT Email, Password
+    $q = "SELECT nomeu, Email, Password
             FROM users
            WHERE '$email' = Email";
     $result = mysqli_query($conn, $q);
@@ -31,6 +31,9 @@ session_start();
             if(password_verify($pass,$row['Password'])){
                 $_SESSION["logged"] = "true"; 
                 //Cookies last 10day 
+                $nome = $row['nomeu'];
+                $_SESSION['nome'] = $nome;
+                $_SESSION['cognome'] = $nome;
                 if(isset($keepConn)){
                     setcookie("email", $email, time() + (86400 * 10), "/");
                     setcookie("pass", $pass, time() + (86400 * 10), "/");
