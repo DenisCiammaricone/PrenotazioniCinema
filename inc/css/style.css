@@ -327,6 +327,11 @@ button
     
 }
 
+.locandineFilm
+{
+    height: 186.5px;
+}
+
 .img-spettacoli
 {
     border-radius: 0;
@@ -335,4 +340,14 @@ button
 #account-name:hover
 {
     cursor: pointer;
+}
+
+.borderless
+{
+    border:0;
+}
+
+.borderless:focus
+{
+    outline:none;
 }

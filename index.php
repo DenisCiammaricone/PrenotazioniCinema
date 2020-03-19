@@ -51,7 +51,7 @@
                             {
                                 $titolo = $row['Titolo'];
                                 $locandina = $row['Locandina'];
-                                
+                                $CodF = $row['PK_CodF'];
                                 ?>
                         
                             <div class="card" style="width:10vw;">
@@ -61,7 +61,7 @@
                               <div class="card-body">
                                   <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
                                   <p class="card-text"></p>
-                                  <a href="#" class="stretched-link"></a>
+                                  <a href="programmazione.php?film=<?php echo $CodF; ?>" class="stretched-link"></a>
                               </div>
 
                             </div>
@@ -85,7 +85,7 @@
 
                             <?php
                         
-                            $q = "select TIME_FORMAT(Orario,'%H:%i') as Orario, PK_Cods, titolo,locandina 
+                            $q = "select TIME_FORMAT(Orario,'%H:%i') as Orario, PK_Cods,PK_CodF, titolo,locandina 
                                   from elenco_film,spettacoli
                                   where elenco_film.PK_CodF = spettacoli.FK_CodF and 
                                   Orario > curtime()
@@ -100,6 +100,7 @@
                                 $locandina = $row['locandina'];
                                 $orario = $row['Orario'];
                                 $nSpettacoli ++;
+                                $CodF = $row['PK_CodF'];
                                 ?>
                             
                             <div class="card" style="width:10vw;">
@@ -113,7 +114,7 @@
                                   <p class="card-text text-center">
                                             
                                         </p>
-                                  <a href="#" class="stretched-link"></a>
+                                  <a href="programmazione.php?film=<?php echo $CodF; ?>" class="stretched-link"></a>
                               </div>
 
                             </div>
@@ -124,7 +125,7 @@
                             {
                                 
                             	$n = 5 - $nSpettacoli;
-                            	$q = 'select TIME_FORMAT(Orario,"%H:%i") as Orario, PK_Cods, titolo,locandina 
+                            	$q = 'select TIME_FORMAT(Orario,"%H:%i") as Orario,PK_CodF, PK_Cods, titolo,locandina 
                                   from elenco_film,spettacoli
                                   where elenco_film.PK_CodF = spettacoli.FK_CodF 
                                   order by Orario,PK_CodS LIMIT '.$n.'';
@@ -136,13 +137,13 @@
                                       $titolo = $row['titolo'];
                                       $locandina = $row['locandina'];
                                       $orario = $row['Orario'];
-                                      
+                                      $CodF = $row['PK_CodF'];
                                 ?>
 
                                   <div class="card" style="width:10vw;">
                                     <?php 
-                                        echo '<span class="text-left"'.$orario.' Domani</span>';
-                                    ?>
+                                    echo '<span class="text-center">'.$orario.' Domani</span>';
+                                ?>
                                     <img class="card-img-top img-spettacoli" src="admin/locandine/<?php echo $locandina; ?>" alt="<?php echo $titolo; ?>">
 
                                     <div class="card-body">
@@ -150,7 +151,7 @@
                                         <p class="card-text text-center">
                                             
                                         </p>
-                                        <a href="#" class="stretched-link"></a>
+                                        <a href="programmazione.php?film=<?php echo $CodF; ?>" class="stretched-link"></a>
                                     </div>
 
                                   </div>
