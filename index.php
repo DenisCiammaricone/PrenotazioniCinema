@@ -41,6 +41,7 @@
                         
                         <hr>
                         <div class="card-deck" style="color:black;">
+                            
                         <?php
                         
                             $q = "select * from elenco_film order by PK_CodF LIMIT 5";
@@ -128,6 +129,8 @@
                                   where elenco_film.PK_CodF = spettacoli.FK_CodF 
                                   order by Orario,PK_CodS LIMIT '.$n.'';
                                   $res = mysqli_query($conn,$q);
+                                
+                                  mysqli_close($conn);
                                   while($row = mysqli_fetch_assoc($res))
                                   {
                                       $titolo = $row['titolo'];

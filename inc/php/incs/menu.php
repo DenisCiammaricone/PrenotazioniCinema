@@ -12,14 +12,13 @@
                     FROM users
                 WHERE '$email' = Email";
                 $result = mysqli_query($conn, $q);
-                mysqli_close($conn);
                 
                 if (mysqli_num_rows($result) > 0) {
                     while($row = mysqli_fetch_array($result)){
                         if(password_verify($pass,$row['Password'])){
                             //header("Location:../../../index.php");
                             $_SESSION["logged"] = "true";
-                            $nome = $row['nomeu'];
+                            $nome = $row['nomeU'];
                             $_SESSION['nome'] = $nome;
                         } else{
                             echo '
@@ -64,7 +63,7 @@
                                 ?>
                         
                                     
-                                        <a href="#" data-toggle="dropdown"><img src="inc/img/account.png" id="account-image" alt="account" style="display:inline"></a>
+                                        <a href="#" data-toggle="dropdown"><img src="inc/img/account.png" id="account-image"></a>
                                         <div class="dropdown-menu dropdown-menu-right">
                                             <a class="dropdown-item" href="#">Account</a>
                                             <a class="dropdown-item" href="#">Acquisti</a>
@@ -75,7 +74,7 @@
                                     
                                 <?php
                                     echo "</div>";
-                                    /*echo('<a id="logoutButton" href="logout.php" type="button" style="width:8vw; margin-left:0" class="btn btn-outline-dark">Logout</a>');*/
+                                    
                                 }
                                 else{ 
                                     echo('<div id="account-dropdown" style="position:absolute; right:1.2%; width:2.5vw;">

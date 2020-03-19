@@ -49,7 +49,6 @@ $(document).ready(
                 sessionStorage.benvenuto = 1; //salvo 1 nella session benvenuto come flag, per capire poi se ho già fatto il click su goosebumps nell'index
                 
                 window.setTimeout(entra,1300); //richiama la funzione entra dopo 1,3 secondi
-                
         });
         
         //funzione per nascondere lo sfondo iniziale e far comparire il sito vero e proprio
@@ -78,19 +77,21 @@ $(document).ready(
         
         
         
-        $('#account-dropdown').css({
-            height: $('#pcNav').height()
-        });
         
+        $('#account-dropdown').css({
+            height: $('#nav').height() - 4
+        });
+
         $('#account-name').css({
             right: 5 + $('#account-dropdown').width(),
-            height: $('#pcNav').height()
+            height: $('#nav').height() - 7
+        });
+
+        $('#account-image').css({
+            height: $('#nav').height() - 7,
+            width: $('#nav').height() - 7
         });
         
-        $('#account-image').css({
-            height: $('#pcNav').height(),
-            width: $('#pcNav').height()
-        });
         
     });
 
