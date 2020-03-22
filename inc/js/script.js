@@ -76,8 +76,6 @@ $(document).ready(
             });
         
         
-        
-        
         $('#account-dropdown').css({
             height: $('#nav').height() - 4
         });
@@ -92,6 +90,14 @@ $(document).ready(
             width: $('#nav').height() - 7
         });
         
+        $('#trailer').on('click', 
+            
+            function(e){
+                
+            e.preventDefault();
+            $('#trailer-modal').modal('show').find('.modal-content').load($(this).attr('href'));
+            
+            });
         
     });
 

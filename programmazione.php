@@ -1,9 +1,7 @@
 <?php
-
     session_start();
 
 ?>
-
 <!doctype html>
 <html lang="it">
     <head>
@@ -50,7 +48,7 @@
                 
                 <article class="mr-1 flex-fill">
                     
-                    <a href="programmazione.php?film=<?php echo $film; ?>"><img class="locandineFilm" src="admin/locandine/<?php echo $locandina; ?>"></a>
+                    <a href="programmazione?film=<?php echo $film; ?>"><img class="locandineFilm" src="admin/locandine/<?php echo $locandina; ?>"></a>
                     
                 </article>
                 
@@ -74,7 +72,9 @@
             
             </section>
             
-            <section class="d-flex flex-column bg-light text-black text-left mt-4" style="margin-left:19%; width:7%;">
+            <hr style="opacity:0;">
+            <div class="d-flex">
+            <section class="d-inline-flex flex-column bg-light text-black text-left" style="float:left;margin-left:19%; width:18%;">
                 <?php 
                     if(isset($_GET['film']))
                     {
@@ -104,7 +104,8 @@
                             $riga = mysqli_fetch_assoc($res);
 
                             $titolo = $riga['Titolo'];
-                            $descrizione = $riga['Descrizione'];
+                            $descrizione = mysqli_real_escape_string($conn,$riga['Descrizione']);
+                            $lnDescr = strlen($descrizione);
                             $locandina = $riga['Locandina'];
                             $durata = $riga['Durata'];
                             $genere = $riga['Nome'];
@@ -129,7 +130,8 @@
                         
                         $codiceFilm = $riga['PK_CodF'];
                         $titolo = $riga['Titolo'];
-                        $descrizione = $riga['Descrizione'];
+                        $descrizione = mysqli_real_escape_string($conn,$riga['Descrizione']);
+                        $lnDescr = strlen($descrizione);
                         $locandina = $riga['Locandina'];
                         $durata = $riga['Durata'];
                         $genere = $riga['Nome'];
@@ -150,7 +152,7 @@
                         
                 ?>
                 
-                        <div class=" border p-1 text-center"><?php echo $ora; ?></div>
+                        <div class="border p-1 text-center"><?php echo $ora; ?></div>
                 
                 <?php
                         
@@ -159,12 +161,40 @@
                 ?>
             </section>
             
-            <section>
+            <section class="d-inline-flex" style="float:left; margin-left:0.5%;">
             
+                <a href="inc/php/incs/trailer?film=<?php echo $codiceFilm;?>" id="trailer"><img src="admin/locandine/<?php echo $locandina; ?>" style="height:400px;"></a>
                 
+                <div class="modal fade" id="trailer-modal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        </div>
+                    </div>
+                </div>
                 
+                <div class="ml-3 text-left mt-1" style="width:25%;">
+                    <h3><?php echo $titolo?></h3>
+                    <h3 class="text-left"><small>Regista: <?php echo $cognReg." ".$nomeReg; ?></small></h3>
+                    <h4 class="text-left"><small>Durata: <?php echo $durata." minuti"; ?></small></h4>
+                    <h4 class="text-left"><small>Genere: <?php echo $genere; ?></small></h4>
+                    
+                    <p>
+                        
+                        <?php 
+                            
+                            $descr = substr_replace($descrizione,"... <a href='#'>Continua</a>",251,$lnDescr-251);
+                            
+                            $descr = stripslashes(utf8_encode($descr));
+                
+                            echo $descr;
+                        ;?>
+                        
+                    </p>
+                    
+                    <a type="button" class="btn btn-dark text-light">Acquista biglietto</a>
+                </div>
             </section>
-        
+        </div>
         </main>
         
         <?php 

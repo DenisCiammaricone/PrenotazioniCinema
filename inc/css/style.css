@@ -351,3 +351,23 @@ button
 {
     outline:none;
 }
+
+#trailer
+{
+    
+}
+
+#trailer{
+  display: inline-block;
+  position: relative;
+}
+
+#trailer:after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  bottom: 0; left: 0;
+  background-image: url("../img/play_button.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

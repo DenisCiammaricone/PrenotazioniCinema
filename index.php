@@ -61,7 +61,7 @@
                               <div class="card-body">
                                   <h4 class="card-title text-center"><?php echo $titolo; ?></h4>
                                   <p class="card-text"></p>
-                                  <a href="programmazione.php?film=<?php echo $CodF; ?>" class="stretched-link"></a>
+                                  <a href="programmazione?film=<?php echo $CodF; ?>" class="stretched-link"></a>
                               </div>
 
                             </div>
@@ -114,7 +114,7 @@
                                   <p class="card-text text-center">
                                             
                                         </p>
-                                  <a href="programmazione.php?film=<?php echo $CodF; ?>" class="stretched-link"></a>
+                                  <a href="programmazione?film=<?php echo $CodF; ?>" class="stretched-link"></a>
                               </div>
 
                             </div>
@@ -151,7 +151,7 @@
                                         <p class="card-text text-center">
                                             
                                         </p>
-                                        <a href="programmazione.php?film=<?php echo $CodF; ?>" class="stretched-link"></a>
+                                        <a href="programmazione?film=<?php echo $CodF; ?>" class="stretched-link"></a>
                                     </div>
 
                                   </div>

@@ -20,13 +20,7 @@
                 header("Location: /index.php");
         ?>
        
-        <form id="aggiungiSpettacoli" method="post" action="php/sc_addSpettacoli.php" enctype="multipart/form-data">
-            <label for="sala">Numero sala: </label>
-            <input type="text" id="sala" name="sala"><br><br>
-            <label for="orario">Orario: </label>
-            <input type="time" id="orario" name="orario"><br><br>
-            <label for="costo">Costo: </label>
-            <input type="text"  id="costo" name="costo"><br><br>
+        <form id="aggiungiSpettacoli" method="post" action="php/sc_addTrailer.php" enctype="multipart/form-data">
             <label for="film">Film: </label>
             <select id="film" name="film">
                 <?php
@@ -57,6 +51,9 @@
                     }
                 ?>
             </select><br><br>
+            
+            <label for="Trailer">Trailer:</label>
+            <input type="text" id="Trailer" name="Trailer">
             
             <input type="submit" value="Aggiungi Spettacolo">
         </form>

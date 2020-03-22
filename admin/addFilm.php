@@ -35,7 +35,7 @@
                     $ip = "localhost";
                     $user = "root";
                     $pass = "";
-                    $db = "my_gruppo1";
+                    $db = "my_cinemagoosebumps";
                     
                     try {
                         $conn = mysqli_connect($ip,$user,$pass,$db);
