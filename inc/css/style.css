@@ -371,3 +371,42 @@ button
   background-repeat: no-repeat;
   background-position: center;
 }
+
+#back-button
+{
+    height:8vh;
+    width:0;
+    transform: width;
+    transition: width .3s cubic-bezier(0,0,1,1);
+}
+
+#back-button img
+{
+    width:0;
+    height:8vh;
+    transition: width .3s cubic-bezier(0,0,1,1);
+    
+}
+
+#hover-expand
+{
+    margin-top:0vh;
+}
+
+#hover-expand:hover #back-button
+{
+    width:5vh;
+}
+
+#hover-expand:hover #back-button img
+{
+    width: 3vw;
+}
+
+#container-expand
+{
+    border:0.1 solid black;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    width:1.5vw;
+}

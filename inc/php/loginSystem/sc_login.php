@@ -20,9 +20,10 @@ session_start();
         ';
     }
 
-    $q = "SELECT nomeu, Email, Password
+    $q = "SELECT PK_CodU, nomeu, Email, Password
             FROM users
            WHERE '$email' = Email";
+
     $result = mysqli_query($conn, $q);
     mysqli_close($conn);
 
@@ -32,8 +33,10 @@ session_start();
                 $_SESSION["logged"] = "true"; 
                 //Cookies last 10day 
                 $nome = $row['nomeu'];
+                
+                $_SESSION['user'] = $row['PK_CodU'];
+                
                 $_SESSION['nome'] = $nome;
-                $_SESSION['cognome'] = $nome;
                 if(isset($keepConn)){
                     setcookie("email", $email, time() + (86400 * 10), "/");
                     setcookie("pass", $pass, time() + (86400 * 10), "/");

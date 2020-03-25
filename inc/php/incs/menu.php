@@ -8,7 +8,7 @@
             if(isset($_COOKIE['email']) && isset($_COOKIE['pass'])){
                 $email = $_COOKIE['email'];
                 $pass = $_COOKIE['pass'];
-                $q = "SELECT nomeU, Email, Password
+                $q = "SELECT PK_CodU, nomeU, Email, Password
                     FROM users
                 WHERE '$email' = Email";
                 $result = mysqli_query($conn, $q);
@@ -18,6 +18,9 @@
                         if(password_verify($pass,$row['Password'])){
                             //header("Location:../../../index.php");
                             $_SESSION["logged"] = "true";
+                            
+                            $_SESSION['user'] = $row['PK_CodU'];
+                            
                             $nome = $row['nomeU'];
                             $_SESSION['nome'] = $nome;
                         } else{

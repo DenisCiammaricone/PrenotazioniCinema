@@ -73,36 +73,63 @@
             </section>
             
             <hr style="opacity:0;">
+            
             <div class="d-flex">
-            <section class="d-inline-flex flex-column bg-light text-black text-left" style="float:left;margin-left:19%; width:18%;">
-                <?php 
-                    if(isset($_GET['film']))
-                    {
-                        $codiceFilm = $_GET['film'];
-                        
-                        $q = "select pk_codf from elenco_film";
-                        $result = mysqli_query($conn,$q);
-                        
-                        $trovato = false;
-                        
-                        while($riga = mysqli_fetch_assoc($result))
+                <section class="d-inline-flex flex-column bg-light text-black text-left" style="float:left;margin-left:19%; width:18%;">
+                    <?php 
+                        if(isset($_GET['film']))
                         {
-                            if($codiceFilm == $riga['pk_codf'])
+                            $codiceFilm = $_GET['film'];
+
+                            $q = "select pk_codf from elenco_film";
+                            $result = mysqli_query($conn,$q);
+
+                            $trovato = false;
+
+                            while($riga = mysqli_fetch_assoc($result))
                             {
-                                $trovato = true;
+                                if($codiceFilm == $riga['pk_codf'])
+                                {
+                                    $trovato = true;
+                                }
+                            }
+
+                            if($trovato)
+                            {
+                                $q = "select elenco_film.*, registifilm.*, generifilm.* 
+                                      from elenco_film,registifilm,generifilm
+                                      where PK_CodG = FK_CodG and PK_CodR = FK_CodR and PK_CodF = '$codiceFilm'";
+
+                                $res = mysqli_query($conn,$q);
+
+                                $riga = mysqli_fetch_assoc($res);
+
+                                $titolo = $riga['Titolo'];
+                                $descrizione = mysqli_real_escape_string($conn,$riga['Descrizione']);
+                                $lnDescr = strlen($descrizione);
+                                $locandina = $riga['Locandina'];
+                                $durata = $riga['Durata'];
+                                $genere = $riga['Nome'];
+                                $nomeReg = $riga['NomeRF'];
+                                $cognReg = $riga['CognomeRF'];
+                            }
+                            else
+                            {
+                                echo "<script language=javascript>window.location.href='index'</script>";
                             }
                         }
-                        
-                        if($trovato)
+                        else
                         {
                             $q = "select elenco_film.*, registifilm.*, generifilm.* 
                                   from elenco_film,registifilm,generifilm
-                                  where PK_CodG = FK_CodG and PK_CodR = FK_CodR and PK_CodF = '$codiceFilm'";
+                                  where PK_CodG = FK_CodG and PK_CodR = FK_CodR
+                                  order by pk_codf limit 1";
 
                             $res = mysqli_query($conn,$q);
 
                             $riga = mysqli_fetch_assoc($res);
 
+                            $codiceFilm = $riga['PK_CodF'];
                             $titolo = $riga['Titolo'];
                             $descrizione = mysqli_real_escape_string($conn,$riga['Descrizione']);
                             $lnDescr = strlen($descrizione);
@@ -111,90 +138,83 @@
                             $genere = $riga['Nome'];
                             $nomeReg = $riga['NomeRF'];
                             $cognReg = $riga['CognomeRF'];
+
                         }
-                        else
-                        {
-                            header("Location:index");
-                        }
-                    }
-                    else
-                    {
-                        $q = "select elenco_film.*, registifilm.*, generifilm.* 
-                              from elenco_film,registifilm,generifilm
-                              where PK_CodG = FK_CodG and PK_CodR = FK_CodR
-                              order by pk_codf limit 1";
-                        
+
+                        $q = "select TIME_FORMAT(Orario,'%H:%i') as Orario 
+                              from spettacoli 
+                              where FK_CodF = '$codiceFilm'";
+
                         $res = mysqli_query($conn,$q);
-                        
-                        $riga = mysqli_fetch_assoc($res);
-                        
-                        $codiceFilm = $riga['PK_CodF'];
-                        $titolo = $riga['Titolo'];
-                        $descrizione = mysqli_real_escape_string($conn,$riga['Descrizione']);
-                        $lnDescr = strlen($descrizione);
-                        $locandina = $riga['Locandina'];
-                        $durata = $riga['Durata'];
-                        $genere = $riga['Nome'];
-                        $nomeReg = $riga['NomeRF'];
-                        $cognReg = $riga['CognomeRF'];
-                        
-                    }
-                
-                    $q = "select TIME_FORMAT(Orario,'%H:%i') as Orario 
-                          from spettacoli 
-                          where FK_CodF = '$codiceFilm'";
-                
-                    $res = mysqli_query($conn,$q);
-                
-                    while($row = mysqli_fetch_assoc($res))
-                    {
-                        $ora = $row["Orario"];
-                        
-                ?>
-                
-                        <div class="border p-1 text-center"><?php echo $ora; ?></div>
-                
-                <?php
-                        
-                    }
-                
-                ?>
-            </section>
-            
-            <section class="d-inline-flex" style="float:left; margin-left:0.5%;">
-            
-                <a href="inc/php/incs/trailer?film=<?php echo $codiceFilm;?>" id="trailer"><img src="admin/locandine/<?php echo $locandina; ?>" style="height:400px;"></a>
-                
-                <div class="modal fade" id="trailer-modal">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
+                        mysqli_close($conn);
+                        while($row = mysqli_fetch_assoc($res))
+                        {
+                            $ora = $row["Orario"];
+
+                    ?>
+
+                            <div class="border p-1 text-center"><?php echo $ora; ?></div>
+
+                    <?php
+
+                        }
+
+                    ?>
+                </section>
+
+                <section class="d-inline-flex" style="float:left; margin-left:0.5%;">
+
+                    <a href="inc/php/incs/trailer?film=<?php echo $codiceFilm;?>" id="trailer"><img src="admin/locandine/<?php echo $locandina; ?>" style="height:400px;"></a>
+
+                    <div class="modal fade" id="trailer-modal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="ml-3 text-left mt-1" style="width:25%;">
-                    <h3><?php echo $titolo?></h3>
-                    <h3 class="text-left"><small>Regista: <?php echo $cognReg." ".$nomeReg; ?></small></h3>
-                    <h4 class="text-left"><small>Durata: <?php echo $durata." minuti"; ?></small></h4>
-                    <h4 class="text-left"><small>Genere: <?php echo $genere; ?></small></h4>
-                    
-                    <p>
-                        
+
+                    <div class="ml-3 text-left mt-1" style="width:35%;">
+                        <h3><?php echo $titolo?></h3>
+                        <h3 class="text-left"><small>Regista: <?php echo $cognReg." ".$nomeReg; ?></small></h3>
+                        <h4 class="text-left"><small>Durata: <?php echo $durata." minuti"; ?></small></h4>
+                        <h4 class="text-left"><small>Genere: <?php echo $genere; ?></small></h4>
+
+                        <p>
+
+                            <?php 
+
+                                $descr = substr_replace($descrizione,"... <a href='#'>Continua</a>",251,$lnDescr-251);
+
+                                $descr = stripslashes(utf8_encode($descr));
+
+                                echo $descr;
+                            ;?>
+
+                        </p>
                         <?php 
-                            
-                            $descr = substr_replace($descrizione,"... <a href='#'>Continua</a>",251,$lnDescr-251);
-                            
-                            $descr = stripslashes(utf8_encode($descr));
+                            if(isset($_SESSION['logged']))
+                            {
+                               if($_SESSION['logged'] == "true")
+                               {
+                                   echo '<a href="prenotazione?codFilm='.$codiceFilm.'" type="button" class="btn btn-dark text-light">Acquista biglietto</a>';
+                               }
+                               else
+                               {
+                                   echo '<a href="#" data-toggle="modal" data-target="#ErroreAcquisto" type="button" class="btn btn-dark text-light">Acquista biglietto</a>';
+                               }
+                            }
+                            else
+                           {
+                               echo '<a href="#" data-toggle="modal" data-target="#ErroreAcquisto" type="button" class="btn btn-dark text-light">Acquista biglietto</a>';
+                           }
+                        ?>
+
+                    </div>
+                </section>
                 
-                            echo $descr;
-                        ;?>
-                        
-                    </p>
-                    
-                    <a type="button" class="btn btn-dark text-light">Acquista biglietto</a>
-                </div>
-            </section>
-        </div>
+                <?php include("inc/php/incs/erroreAcquisto.php");?>
+                
+            </div>
         </main>
         
         <?php 

@@ -43,8 +43,8 @@
 
               <div class="card-body">
                   <div>
-                      <a href="#"><img src="inc/img/facebook.png" style="width:2vw; margin-right:0.5vw;"></a>
-                      <a href="#"><img src="inc/img/instagram.png" style="width:2vw"></a>
+                      <a href="https://www.facebook.com/Cinema-Goosebumps-106479950990128/" target="_blank"><img src="inc/img/facebook.png" style="width:2vw; margin-right:0.5vw;"></a>
+                      <a href="https://www.instagram.com/cinema.goosebumps" target="_blank"><img src="inc/img/instagram.png" style="width:2vw"></a>
                   </div>
               </div>
 
