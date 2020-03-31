@@ -54,7 +54,7 @@
 
                         $titolo = $riga['Titolo'];
                         $descrizione = mysqli_real_escape_string($conn,$riga['Descrizione']);
-                        $lnDescr = strlen($descrizione);
+                        //$lnDescr = strlen($descrizione);
                         $locandina = $riga['Locandina'];
                         $durata = $riga['Durata'];
                         $genere = $riga['Nome'];
@@ -80,7 +80,7 @@
                     $codiceFilm = $riga['PK_CodF'];
                     $titolo = $riga['Titolo'];
                     $descrizione = mysqli_real_escape_string($conn,$riga['Descrizione']);
-                    $lnDescr = strlen($descrizione);
+                    //$lnDescr = strlen($descrizione);
                     $locandina = $riga['Locandina'];
                     $durata = $riga['Durata'];
                     $genere = $riga['Nome'];
@@ -131,11 +131,41 @@
             </div>
             
         </div>
-        
-        <main class="container text-center">
+        <main class="row mt-4">
+            <section class="col-sm-2 text-center">
+
+                <img src="admin/locandine/<?php echo $locandina;?>" style="height:250px;">
+
+            </section>
+
+            <section class="col-sm-8">
+
+                <h1 class="text-center"><?php echo $titolo;?></h1>
+
+                <article class="text-left">
+                    <p>
+                        <?php 
+                            echo stripslashes(utf8_encode($descrizione));;
+                        ?>
+                    </p>
+                </article>
+
+            </section>
             
-            
-        
+            <section class="col-sm-2 text-left">
+
+                <article>
+                
+                    <?php
+                    
+                        echo '<h5>Regista: '.$nomeReg.' '.$cognReg.'</h5>';
+                        echo '<h5>Durata: '.$durata.'</h5>';
+                    
+                    ?>
+                
+                </article>
+
+            </section>
         </main>
         
         <?php                
